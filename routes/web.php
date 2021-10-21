@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboardAdmin.listpeserta');
 });
+
+Route::get('/artikel', function () {
+    return view('dashboardAdmin.artikel');
+});
+
+Route::get('/prestasi', function () {
+    return view('dashboardAdmin.prestasi');
+});
