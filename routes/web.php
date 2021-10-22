@@ -20,6 +20,9 @@ Route::get('/listpeserta', function () {
 Route::get('/detailpendaftar', function () {
     return view('dashboardAdmin.detailpendaftar');
 });
+Route::get('/pengurus', function () {
+    return view('dashboardAdmin.pengurus');
+});
 
 Route::get('/artikel', function () {
     return view('dashboardAdmin.artikel');

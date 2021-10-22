@@ -28,33 +28,33 @@
                                         <tr align="center">
                                             <td><input type="checkbox"></td>
                                             <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
+                                            <td>lalala@gmai.com</td>
+                                            <td>086493939209</td>
                                             <td><a href="{{url('/detailpendaftar')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
                                         <tr align="center">
                                             <td><input type="checkbox"></td>
                                             <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td><a href="">Lebih detail</a></td>
+                                            <td>lalala@gmai.com</td>
+                                            <td>086493939209</td>
+                                            <td><a href="{{url('/detailpendaftar')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
                                         <tr align="center">
                                             <td><input type="checkbox"></td>
                                             <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td><a href="">Lebih detail</a></td>
+                                            <td>lalala@gmai.com</td>
+                                            <td>086493939209</td>
+                                            <td><a href="{{url('/detailpendaftar')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
                                         <tr align="center">
                                             <td><input type="checkbox"></td>
                                             <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td><a href="">Lebih detail</a></td>
+                                            <td>lalala@gmai.com</td>
+                                            <td>086493939209</td>
+                                            <td><a href="{{url('/detailpendaftar')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
                                     </tbody>

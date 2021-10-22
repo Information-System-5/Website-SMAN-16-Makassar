@@ -9,7 +9,7 @@
                         </div>
                     </div>
 
-                    <div class="deskripsi-produk">
+                    <div class="detail-pendaftar">
                         <div class="container table-responsive">
 
                             <table class=" table table-striped">
