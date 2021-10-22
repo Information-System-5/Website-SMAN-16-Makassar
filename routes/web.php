@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboardAdmin.listpeserta');
+Route::get('/listpeserta', function () {
+    return view('dashboardAdmin.listpendaftar');
+});
+
+Route::get('/detailpendaftar', function () {
+    return view('dashboardAdmin.detailpendaftar');
 });
 
 Route::get('/artikel', function () {
