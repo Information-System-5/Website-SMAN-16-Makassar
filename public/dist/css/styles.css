@@ -11686,3 +11686,573 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
+/* NAVBAR */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --putih : #fff;
+    --merah-2 : #370617;
+    --merah-3 : #6A040F;
+    --merah-4 : #9D0208;
+    --abu : rgb(194, 194, 194);
+    --kuning-6 : #e85d04;
+    --kuning-7 : #FAA307;
+    --hitam : #000;
+}
+
+  /* ------------- 
+  NAVBAR STYLE 
+  ----------------*/
+.navbar {
+    background-color: var(--putih);
+    border-bottom: 1px #1d030c10 solid;
+}
+
+.navbar-brand {
+    font-weight: 550;
+    font-size: 24px;
+}
+
+.wrapper-navbar, .navbar-toggler{
+    outline: none!important;
+    border: none!important;
+}
+
+.wrapper-navbar, .fa {
+    font-size: 26px;
+    color: var(--merah-3);
+}
+
+.nav-link{
+    font-size: 17px;
+    font-weight: 525;
+}
+.wrapper-navbar, .active{
+    border-bottom: 2px var(--merah-2) solid;
+}
+
+.nav-link:hover{
+    color: var(--merah-4);
+}
+ 
+  /* ------------- 
+  FOOTER STYLE 
+  ----------------*/
+
+.container-footer{
+    background-color: var(--merah-2);
+    padding: 20px;
+    color: var(--putih);
+    font-size: 15px;
+}
+
+ .title{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.container-footer a{
+    text-decoration: none;
+    color: var(--putih);
+    font-size: 25px;
+}
+
+.container-footer hr{
+    height: 2px;
+    background-color: var(--putih);
+}
+
+.container-footer .copyright{
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+  /* ------------- 
+  PENDAFTARAN STYLE 
+  ----------------*/
+.wrapper-pendaftaran {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+  }
+  
+  .wrapper-pendaftaran .title {
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--merah-3);
+  }
+  
+  .wrapper-pendaftaran hr{
+      width: 150px;
+      height: 1px;
+      background-color: var(--hitam);
+      margin-bottom: 40px;
+  }
+
+  .wrapper-pendaftaran .form {
+    width: 100%;
+  }
+  
+  .wrapper-pendaftaran .form .input-field {
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+  }
+  .wrapper-pendaftaran .form .input-field label {
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .input,
+  .wrapper-pendaftaran .form .input-field .textarea {
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--abu);
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .radio {
+    position: relative;
+    width: 100%;
+  }
+  .wrapper-pendaftaran .form .input-field .radio label {
+    margin-left: 5px;
+  }
+  input[type="radio"]::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    /* top: -2px;
+    left: -1px; */
+    position: relative;
+    background-color: #e2e2e2;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }   
+  
+  input[type="radio"]:checked:after {
+    outline: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    /* top: -23.5px;
+    left: 4.5px; */
+    position: relative;
+  
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    background-color: #696969;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .input:focus,
+  .wrapper-pendaftaran .form .input-field .textarea:focus {
+    border: 2px solid #696969;
+  }
+  .wrapper-pendaftaran .form .input-field .token label {
+    font-weight: 900;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 14px;
+  }
+  .wrapper-pendaftaran .form .input-field .token {
+    width: 100%;
+    display: flex;
+  }
+  .wrapper-pendaftaran .form .input-field .token .input {
+    width: 30%;
+    outline: none;
+    border: 2px solid var(--kuning-6);
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  .wrapper-pendaftaran .form .input-field .token .input:focus {
+    border: 2px solid var(--kuning-6);
+    color: var(--putih);
+  }
+  
+  .wrapper-pendaftaran .form .input-field .btn {
+    width: 20%;
+    margin-left: auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 0px;
+    background: #dc2f02;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .btn:hover,
+  .wrapper-pendaftaran .form .input-field input[type="reset"] {
+    background: #ff5d34;
+  }
+  
+  .wrapper-pendaftaran .form .input-field input[type="reset"] {
+    color: #dc2f02;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: auto;
+  }
+  @media (max-width: 420px) {
+    .wrapper-pendaftaran .form .input-field {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper-pendaftaran .form .input-field label {
+      margin-bottom: 5px;
+    }
+  }
+  
+  /* ------------- 
+  PENGURUS STYLE 
+  ----------------*/
+  .wrapper-pengurus .jumbotron{
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../image/header-jumbotron.jpg');
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+      border-radius: 0px!important;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 55px;
+      color: var(--putih);
+      letter-spacing: 6px;
+  }
+  .tree,
+.tree ul,
+.tree li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.tree {
+    margin: 0 0 1em;
+    text-align: center;
+    font-size: 17px;
+}
+
+.tree,
+.tree ul {
+    display: table;
+}
+
+.tree ul {
+    width: 100%;
+}
+
+.tree .mabigus, .tree .pembina{
+    vertical-align: top;
+}
+
+.tree .ketua, .tree .sekertaris{
+  display: table-cell;
+  padding: 2.5em 0 0;
+  vertical-align: top;
+}
+.tree .bendhara, .tree .pemangku,.tree .anggota{
+  display: table-cell;
+  padding: 0.5em 0;
+  vertical-align: top;
+}
+
+.tree li:before {
+    outline: solid 2px var(--kuning-7);
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 33px;  
+}
+
+.tree li:first-child:before {
+    left: 50%;
+}
+
+.tree li:last-child:before {
+    right: 50%;
+}
+
+.tree code,
+.tree span {
+    border: solid .2em var(--kuning-7);
+    border-radius: 1.2em;
+    display: inline-block;
+    padding: 1.2em 2.5em;
+    width: 18em;
+}
+
+.tree hr{
+  margin-top: 0em;
+}
+
+.tree b {
+  font-size: 23px;
+}
+
+.tree code,
+.mabigus span{
+    margin: 0 .2em .9em;
+}
+
+.tree code,
+.pembina span{
+    margin: 2.6em .2em .5em;
+}
+
+.tree code,
+.ketua span{
+    margin: 2.6em .2em .5em;
+}
+
+.tree code,
+.sekertaris span{
+    margin: 1.8em .2em .5em;
+}
+
+.tree code,
+.bendhara span{
+    margin: 3.5em .2em 0;
+}
+
+.tree code,
+.pemangku span{
+    margin: 3.5em .2em 0;
+}
+
+.tree code,
+.anggota span{
+    margin: 3.5em .2em .5em;
+}
+
+.tree ul:before,
+.tree code:before,
+.tree span:before {
+    outline: solid 2px var(--kuning-7);
+    content: "";
+    height: 2em;
+    left: 50%;
+    position: absolute;
+}
+
+.tree code:before, .pembina span:before {
+    top: -0.4em;
+    padding-top: 2em;
+}
+
+.tree code:before, .ketua span:before {
+    top: 2.6em;
+}
+.tree code:before,
+.sekertaris span:before, 
+.bendhara span:before, 
+.pemangku span:before, 
+.anggota span:before {
+    top: 1.5em;
+}
+
+
+.tree>li {
+    margin-top: 0;
+}
+
+.tree>li:before,
+.tree>li:after,
+.tree>li>code:before,
+.tree>li>span:before {
+    outline: none;
+}
+
+/* Form Pendaftaran */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+body {
+  padding: 0px 10px;
+}
+.wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.wrapper .title {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.wrapper .form {
+  width: 100%;
+}
+
+.wrapper .form .input-field {
+  margin-bottom: 15px;
+  align-items: center;
+  display: flex;
+}
+.wrapper .form .input-field label {
+  width: 200px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .input-field .input,
+.wrapper .form .input-field .textarea {
+  width: 100%;
+  outline: none;
+  border: 2px solid rgb(194, 194, 194);
+  border-radius: 5px;
+  padding: 4px 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .input-field .textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.wrapper .form .input-field .radio {
+  position: relative;
+  width: 100%;
+}
+
+/* mengubah style dan warna untuk radio button  */
+/* 
+.wrapper .form .input-field .radio label {
+  margin-left: 5px;
+}
+input[type="radio"]::before {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e2e2e2;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  outline: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: -23.5px;
+  left: 4.5px;
+  position: relative;
+
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  background-color: #696969;
+} */
+
+.wrapper .form .input-field .input:focus,
+.wrapper .form .input-field .textarea:focus {
+  border: 2px solid #696969;
+}
+.wrapper .form .input-field .token label {
+  font-weight: 900;
+  width: 50px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: auto;
+  font-size: 14px;
+}
+.wrapper .form .input-field .token {
+  width: 100%;
+  display: flex;
+}
+.wrapper .form .input-field .token .input {
+  width: 30%;
+  outline: none;
+  border: 2px solid #ffaa75;
+  border-radius: 5px;
+  padding: 4px 5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+.wrapper .form .input-field .token .input:focus {
+  border: 2px solid #e85d04;
+}
+
+.wrapper .form .input-field .btn {
+  width: 20%;
+  margin-left: auto;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 0px;
+  background: #dc2f02;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .input-field .btn:hover,
+.wrapper .form .input-field input[type="reset"] {
+  background: #ff5d34;
+}
+
+.wrapper .form .input-field input[type="reset"] {
+  color: #dc2f02;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: auto;
+}
+@media (max-width: 420px) {
+  .wrapper .form .input-field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .input-field label {
+    margin-bottom: 5px;
+  }
+}

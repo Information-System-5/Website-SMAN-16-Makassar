@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Admin
 Route::get('/listpeserta', function () {
     return view('dashboardAdmin.listpendaftar');
 });
@@ -30,4 +31,9 @@ Route::get('/artikel', function () {
 
 Route::get('/prestasi', function () {
     return view('dashboardAdmin.prestasi');
+});
+
+// Main Website
+Route::get('/formpendaftaran', function () {
+    return view('mainWebsite.formpendaftaran');
 });
