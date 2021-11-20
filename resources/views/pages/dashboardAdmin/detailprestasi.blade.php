@@ -6,12 +6,14 @@
                             <h2 class="dashboard-title">
                                 Detail Artikel
                             </h2>
+                            <form action="">
+                                <button type="submit" class="btn btn-primary mb-3">Edit</button>
+                            </form>
                         </div>
                     </div>
 
                     <div class="detail-artikel">
                         <div class="container table-responsive">
-
                             <table class=" table">
                                 <tr>
                                     <th width="200px">Id</th>

@@ -6,6 +6,9 @@
                             <h2 class="dashboard-title">
                                 Detail Artikel
                             </h2>
+                            <form action="">
+                                <button type="submit" class="btn btn-primary mb-3">Edit</button>
+                            </form>
                         </div>
                     </div>
 
@@ -15,7 +18,7 @@
                             <table class=" table">
                                 <tr>
                                     <th width="200px">Kode Artikel</th>
-                                    <td>101010Rein</td>
+                                    <td>1</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Nama Penulis</th>

@@ -45,8 +45,8 @@
                                 <i class="fas fa-table me-1"></i>
                                 Tabel Prestasi
                             </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
+                            <div class="card-body table-responsive">
+                                <table id="datatablesSimple" class="space">
                                     <thead>
                                         <tr>
                                             <th>Id</th>
@@ -60,21 +60,21 @@
                                         <tr>
                                             <td>1</td>
                                             <td>Juara satu sepak bola tingkat kecamatan</td>
-                                            <td>Tim NAGA dari pramuka SMAN 16 makassar memperoleh kemenangan setelah melawan Tim MACAN dari SMAN 17 Makassar dengan skor 100-0.9</td>
+                                            <td class="block-with-text">Tim NAGA dari pramuka SMAN 16 makassar memperoleh kemenangan setelah melawan Tim MACAN dari SMAN 17 Makassar dengan skor 100-0.9</td>
                                             <td><a href="{{url('/detailprestasi')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>Juara tiga harapan pramuka festival</td>
-                                            <td>Pramuka dari SMAN 16Makassar memperoleh juara tiga harapan dari kegiatan Pramuka Festival</td>
+                                            <td class="block-with-text">Pramuka dari SMAN 16Makassar memperoleh juara tiga harapan dari kegiatan Pramuka Festival</td>
                                             <td><a href="{{url('/detailprestasi')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
                                             <td>Juara dua lomba menari balet </td>
-                                            <td>Tim NAGA dari pramuka SMAN 16 makassar memperoleh juara dua lomba menari balet dalam ajang Balerina Cup Indonesia</td>
+                                            <td class="block-with-text">Tim NAGA dari pramuka SMAN 16 makassar memperoleh juara dua lomba menari balet dalam ajang Balerina Cup Indonesia</td>
                                             <td><a href="{{url('/detailprestasi')}}">Lebih detail</a></td>
                                             <td><a href=""><i class="fa fa-trash" color="red"></i></a></td>
                                         </tr>
@@ -85,3 +85,7 @@
                     </div>
                 </main>
 @endsection
+
+@push('prepend-style')
+    <link rel="stylesheet" href="{{ url('dist/css/articel.css') }}">
+@endpush
