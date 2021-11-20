@@ -12,7 +12,7 @@
                     <div class="detail-pendaftar">
                         <div class="container table-responsive">
 
-                            <table class=" table table-striped">
+                            <table class=" table">
                                 <tr>
                                     <th width="200px">Nama Lengkap</th>
                                     <td>Tiger Nixon</td>
