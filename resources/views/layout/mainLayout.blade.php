@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-logo" href="#">
-            <img src="../assets/image/logo.jpeg" width="60" height="60" class="d-inline-block align-top" alt="">
+            <img src="../dist/image/logo.jpeg" width="60" height="60" class="d-inline-block align-top" alt="">
           </a>
           <a class="navbar-brand pl-5" href="../index.php">PARAGA SCOUT</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item  mr-4">
-                  <a class="nav-link" href="../index.php">Home</a>
+                  <a class="nav-link" href="/index">Home</a>
                 </li>
                 <li class="nav-item dropdown  mr-4">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

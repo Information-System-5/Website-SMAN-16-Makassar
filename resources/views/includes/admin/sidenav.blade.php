@@ -3,22 +3,22 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Pengurus</div>
-                <a class="nav-link" href="{{url('/pengurus')}}">
+                <a class="nav-link" href="{{url('/admin/pengurus')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Pengurus
                 </a>
                 <div class="sb-sidenav-menu-heading">Artikel</div>
-                <a class="nav-link" href="{{url('/artikel')}}">
+                <a class="nav-link" href="{{url('/admin/artikel')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Artikel
                 </a>
                 <div class="sb-sidenav-menu-heading">Prestasi</div>
-                <a class="nav-link" href="{{url('/prestasi')}}">
+                <a class="nav-link" href="{{url('/admin/prestasi')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Prestasi
                 </a>
                 <div class="sb-sidenav-menu-heading">Pendaftar</div>
-                <a class="nav-link" href="{{url('/listpeserta')}}">
+                <a class="nav-link" href="{{url('/admin/listpeserta')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Pendaftar
                 </a>

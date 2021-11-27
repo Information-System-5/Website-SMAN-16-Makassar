@@ -7,3 +7,4 @@
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <link href="{{URL::asset('/dist/js/orgchart.js') }}" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="{{URL::asset('/dist/js/orgchart.js') }}"></script>
+

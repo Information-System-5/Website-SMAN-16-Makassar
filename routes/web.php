@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\DashboardArtikelController;
+use App\Http\Controllers\DashboardPrestasiController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,38 +18,58 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Admin
-Route::get('/listpeserta', function () {
+Route::get('/admin/listpeserta', function () {
     return view('pages.dashboardAdmin.listpendaftar');
 });
 
-Route::get('/artikel', function () {
-    return view('pages.dashboardAdmin.artikel');
-});
+Route::resource('/admin/artikel', DashboardArtikelController::class);
 
-Route::get('/prestasi', function () {
-    return view('pages.dashboardAdmin.prestasi');
-});
+Route::resource('/admin/prestasi', DashboardPrestasiController::class);
 
-Route::get('/pengurus', function () {
+// Route::get('/admin/prestasi', function () {
+//     return view('pages.dashboardAdmin.prestasi');
+// });
+
+Route::get('/admin/pengurus', function () {
     return view('pages.dashboardAdmin.pengurus');
-});
-
-// Detail Admin
-Route::get('/detailartikel', function () {
-    return view('pages.dashboardAdmin.detailartikel');
 });
 
 Route::get('/detailpendaftar', function () {
     return view('pages.dashboardAdmin.detailpendaftar');
 });
 
-Route::get('/detailprestasi', function () {
-    return view('pages.dashboardAdmin.detailprestasi');
-});
+// Route::get('/prestasi/detail', function () {
+//     return view('pages.dashboardAdmin.detailprestasi');
+// });
 
 // Main Website
+
+Route::get('/home', function () {
+    return view('pages.mainWebsite.index');
+});
+
 Route::get('/formpendaftaran', function () {
     return view('pages.mainWebsite.formpendaftaran');
+});
+
+Route::get('/artikel', function () {
+    return view('pages.mainWebsite.artikel');
+});
+
+Route::get('/pengurus', function () {
+    return view('pages.mainWebsite.pengurus');
+});
+
+Route::get('/prestasi', function () {
+    return view('pages.mainWebsite.prestasi');
+});
+
+Route::get('/previewartikel', function () {
+    return view('pages.mainWebsite.previewartikel');
+});
+
+Route::get('/visi-misi', function () {
+    return view('pages.mainWebsite.visimisi');
 });
 
 // Route::get('/admin/artikel', [DetailController::class, 'index'])->name('artikel');
