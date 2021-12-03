@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
           <a class="navbar-logo" href="#">
-            <img src="../dist/image/logo.jpeg" width="60" height="60" class="d-inline-block align-top" alt="">
+            <img src="../dist/img/logo.jpeg" width="60" height="60" class="d-inline-block align-top" alt="">
           </a>
           <a class="navbar-brand pl-5" href="../index.php">PARAGA SCOUT</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

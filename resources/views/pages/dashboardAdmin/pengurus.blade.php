@@ -2,124 +2,104 @@
 
 @section('main')
 
-<div style="width:100%; height:700px;" id="orgchart"></div>  
+    <!-- ==MAIN CONTENT== -->
+    <div class="wrapper-pengurus">
+      <div class="jumbotron">
+        <div class="container">
+          <h3 class="display-4 text-center"> Struktur Organisasi </h3>
+        </div>
+      </div>
 
-<script>
-        var chart = new OrgChart(document.getElementById("orgchart"), {
-            nodeBinding: {
-                field_0: "name"
-            },
-            nodes: [
-                { id: 1, name: "Amber McKenzie" },
-                { id: 2, pid: 1, name: "Ava Field" },
-                { id: 3, pid: 1, name: "Peter Stevens" }
-            ]
-        });
-    </script>
-    
-<!-- <div id="diagram_container"></div>         
-                <div class="row mt-5 mb-4">
-                            <div class="pengurus-item col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ URL::asset('/dist/img/pengurus/Ketua.jpeg') }}" class="card-img-top"
-                                        alt="...">
+      <div class="row">
+        <div class="col-md-3 col pengurus"></div>
+        <div class="col-md-6">
+          <ul class="tree">
+            <li class="mabigus"> 
+              <span>MABIGUS
+                <hr>
+                <b>Jane Doe</b>
+              </span>
+              <ul>
+                <li class="pembina"> 
+                  <span>PEMBINA UTAMA
+                    <hr>
+                    <b>Jane Doe</b>
+                  </span>
+                  <ul class="space-ketua">
+                    <li class="ketua"> 
+                      <span >KETUA DEWAN PUTRA
+                        <hr>
+                        <b>Jane Doe</b>
+                      </span>
+                      <ul>
+                        <li class="sekertaris">
+                          <span>SEKERTARIS PUTRA
+                            <hr>
+                            <b>Jane Doe</b>
+                          </span></li>
+                      </ul>
+                      <ul>
+                        <li class="bendhara">
+                          <span>BENDAHARA PUTRA
+                            <hr>
+                            <b>Jane Doe</b>
+                          </span></li>
+                      </ul>
+                      <ul>
+                        <li class="pemangku">
+                          <span>PEMANGKU ADAT PUTRA
+                            <hr>
+                            <b>Jane Doe</b>
+                          </span></li>
+                      </ul>
+                      <ul>
+                        <li class="anggota">
+                          <span><b>ANGGOTA</b>
+                          </span></li>
+                      </ul>
+                    </li>
+                    <li class="ketua"> 
+                      <span>KETUA DEWAN PUTRI
+                        <hr>
+                        <b>Jane Doe</b>
+                    </span>
+                    <ul>
+                      <li class="sekertaris">
+                        <span>SEKERTARIS PUTRI
+                          <hr>
+                          <b>Jane Doe</b>
+                        </span></li>
+                    </ul>
+                    <ul>
+                      <li class="bendhara">
+                        <span>BENDAHARA PUTRI
+                          <hr>
+                          <b>Jane Doe</b>
+                        </span></li>
+                    </ul>
+                    <ul>
+                      <l class="pemangku">
+                        <span>PEMANGKU ADAT PUTRI
+                          <hr>
+                          <b>Jane Doe</b>
+                        </span></li>
+                    </ul>
+                    <ul>
+                      <li class="anggota">
+                        <span><b>ANGGOTA</b>
+                        </span></li>
+                    </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-pengurus"></div>
+      </div>
 
-                                    <div class="card-body">
-                                        <div class="dashboard-heading">
-                                            <h5 class="card-title">
-                                                Brillianita
-                                            </h5>
-                                            <h6 class="card-title">
-                                                Ketua Organisasi <a href=""><i class="fa fa-pencil"></i></a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pengurus-item col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ URL::asset('/dist/img/pengurus/Ketua.jpeg') }}" class="card-img-top"
-                                        alt="...">
+    </div>
+    <!-- ==END OF MAIN CONTENT== -->
 
-                                    <div class="card-body">
-                                        <div class="dashboard-heading">
-                                            <h5 class="card-title">
-                                                Brillianita
-                                            </h5>
-                                            <h6 class="card-title">
-                                                Wakil Ketua Organisasi <a href=""><i class="fa fa-pencil"></i></a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pengurus-item col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ URL::asset('/dist/img/pengurus/Ketua.jpeg') }}" class="card-img-top"
-                                        alt="...">
-
-                                    <div class="card-body">
-                                        <div class="dashboard-heading">
-                                            <h5 class="card-title">
-                                                Brillianita
-                                            </h5>
-                                            <h6 class="card-title">
-                                                Wakil Ketua Organisasi <a href=""><i class="fa fa-pencil"></i></a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pengurus-item col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ URL::asset('/dist/img/pengurus/Ketua.jpeg') }}" class="card-img-top"
-                                        alt="...">
-
-                                    <div class="card-body">
-                                        <div class="dashboard-heading">
-                                            <h5 class="card-title">
-                                                Brillianita
-                                            </h5>
-                                            <h6 class="card-title">
-                                                Wakil Ketua Organisasi <a href=""><i class="fa fa-pencil"></i></a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pengurus-item col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ URL::asset('/dist/img/pengurus/Ketua.jpeg') }}" class="card-img-top"
-                                        alt="...">
-
-                                    <div class="card-body">
-                                        <div class="dashboard-heading">
-                                            <h5 class="card-title">
-                                                Brillianita
-                                            </h5>
-                                            <h6 class="card-title">
-                                                Wakil Ketua Organisasi <a href=""><i class="fa fa-pencil"></i></a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pengurus-item col-lg-3 col-md-4 col-sm-6">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="{{ URL::asset('/dist/img/pengurus/Ketua.jpeg') }}" class="card-img-top"
-                                        alt="...">
-
-                                    <div class="card-body">
-                                        <div class="dashboard-heading">
-                                            <h5 class="card-title">
-                                                Brillianita
-                                            </h5>
-                                            <h6 class="card-title">
-                                                Wakil Ketua Organisasi <a href=""><i class="fa fa-pencil"></i></a>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div> -->
-@endsection
+    @endsection
