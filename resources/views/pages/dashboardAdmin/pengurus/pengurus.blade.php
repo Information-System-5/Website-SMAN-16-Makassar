@@ -1,15 +1,8 @@
 @extends('layout.adminLayout')
 
 @section('main')
-
     <!-- ==MAIN CONTENT== -->
     <div class="wrapper-pengurus">
-      <div class="jumbotron">
-        <div class="container">
-          <h3 class="display-4 text-center"> Struktur Organisasi </h3>
-        </div>
-      </div>
-
       <div class="row">
         <div class="col-md-3 col pengurus"></div>
         <div class="col-md-6">
@@ -23,7 +16,7 @@
                 <li class="pembina"> 
                   <span>PEMBINA UTAMA
                     <hr>
-                    <b>Jane Doe</b>
+                    <b>Jane Doe</b><i class="fas fa-edit edit-button"></i>
                   </span>
                   <ul class="space-ketua">
                     <li class="ketua"> 
@@ -101,5 +94,4 @@
 
     </div>
     <!-- ==END OF MAIN CONTENT== -->
-
-    @endsection
+@endsection

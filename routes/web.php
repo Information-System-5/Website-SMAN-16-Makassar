@@ -31,7 +31,7 @@ Route::resource('/admin/prestasi', DashboardPrestasiController::class);
 // });
 
 Route::get('/admin/pengurus', function () {
-    return view('pages.dashboardAdmin.pengurus');
+    return view('pages.dashboardAdmin.pengurus.pengurus');
 });
 
 Route::get('/detailpendaftar', function () {

@@ -11948,6 +11948,13 @@ body{
       color: var(--putih);
       letter-spacing: 6px;
   }
+
+  .wrapper-pengurus {
+    margin-top: 50px;
+  }
+  .edit-button {
+    margin-left: 0.5 rem;
+  }
   .tree,
 .tree ul,
 .tree li {
