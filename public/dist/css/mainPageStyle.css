@@ -87,135 +87,164 @@ body {
   font-weight: 500;
 }
 
-/* ------------- 
+ /* ------------- 
   PENDAFTARAN STYLE 
   ----------------*/
 .wrapper-pendaftaran {
-  max-width: 700px;
-  width: 100%;
-  margin: 20px auto;
-  padding: 30px;
-}
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+  }
+  
+  .wrapper-pendaftaran .title {
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--merah-3);
+  }
+  
+  .wrapper-pendaftaran hr{
+      width: 150px;
+      height: 1px;
+      background-color: var(--hitam);
+      margin-bottom: 40px;
+  }
 
-.wrapper-pendaftaran .title {
-  font-size: 42px;
-  font-weight: 400;
-  text-align: center;
-  color: var(--merah-3);
-}
-
-.wrapper-pendaftaran hr {
-  width: 150px;
-  height: 1px;
-  background-color: var(--hitam);
-  margin-bottom: 40px;
-}
-
-.wrapper-pendaftaran .form {
-  width: 100%;
-}
-
-.wrapper-pendaftaran .form .input-field {
-  margin-bottom: 15px;
-  align-items: center;
-  display: flex;
-}
-.wrapper-pendaftaran .form .input-field label {
-  width: 200px;
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.wrapper-pendaftaran .form .input-field .input,
-.wrapper-pendaftaran .form .input-field .textarea {
-  width: 100%;
-  outline: none;
-  border: 2px solid var(--abu);
-  border-radius: 5px;
-  padding: 4px 5px;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-.wrapper-pendaftaran .form .input-field .textarea {
-  width: 100%;
-  height: 100px;
-  resize: none;
-}
-
-.wrapper-pendaftaran .form .input-field .radio {
-  position: relative;
-  width: 100%;
-}
-.wrapper-pendaftaran .form .input-field .radio label {
-  margin-left: 5px;
-}
-
-.wrapper-pendaftaran .form .input-field .input:focus,
-.wrapper-pendaftaran .form .input-field .textarea:focus {
-  border: 2px solid #696969;
-}
-.wrapper-pendaftaran .form .input-field .token label {
-  font-weight: 900;
-  width: 50px;
-  margin-top: 5px;
-  margin-right: 10px;
-  margin-left: auto;
-  font-size: 14px;
-}
-.wrapper-pendaftaran .form .input-field .token {
-  width: 100%;
-  display: flex;
-}
-.wrapper-pendaftaran .form .input-field .token .input {
-  width: 30%;
-  outline: none;
-  border: 2px solid var(--kuning-7);
-  border-radius: 5px;
-  padding: 4px 5px;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-.wrapper-pendaftaran .form .input-field .token .input:focus {
-  border: 2px solid var(--kuning-6);
-}
-
-.wrapper-pendaftaran .form .input-field .btn {
-  width: 20%;
-  margin-left: auto;
-  padding: 8px 10px;
-  font-size: 14px;
-  border: 0px;
-  background: #dc2f02;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
-}
-
-.wrapper-pendaftaran .form .input-field .btn:hover,
-.wrapper-pendaftaran .form .input-field input[type="reset"] {
-  background: #ff5d34;
-}
-
-.wrapper-pendaftaran .form .input-field input[type="reset"] {
-  color: #dc2f02;
-  outline: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  margin-bottom: auto;
-}
-@media (max-width: 420px) {
+  .wrapper-pendaftaran .form {
+    width: 100%;
+  }
+  
   .wrapper-pendaftaran .form .input-field {
-    flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
   }
   .wrapper-pendaftaran .form .input-field label {
-    margin-bottom: 5px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
   }
-}
+  
+  .wrapper-pendaftaran .form .input-field .input,
+  .wrapper-pendaftaran .form .input-field .textarea {
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--abu);
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .radio {
+    position: relative;
+    width: 100%;
+  }
+  .wrapper-pendaftaran .form .input-field .radio label {
+    margin-left: 5px;
+  }
+  input[type="radio"]::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    /* top: -2px;
+    left: -1px; */
+    position: relative;
+    background-color: #e2e2e2;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+  }   
+  
+  input[type="radio"]:checked:after {
+    outline: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    /* top: -23.5px;
+    left: 4.5px; */
+    position: relative;
+  
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    background-color: #696969;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .input:focus,
+  .wrapper-pendaftaran .form .input-field .textarea:focus {
+    border: 2px solid #696969;
+  }
+  .wrapper-pendaftaran .form .input-field .token label {
+    font-weight: 900;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 14px;
+  }
+  .wrapper-pendaftaran .form .input-field .token {
+    width: 100%;
+    display: flex;
+  }
+  .wrapper-pendaftaran .form .input-field .token .input {
+    width: 30%;
+    outline: none;
+    border: 2px solid var(--kuning-6);
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  .wrapper-pendaftaran .form .input-field .token .input:focus {
+    border: 2px solid var(--kuning-6);
+    color: var(--putih);
+  }
+  
+  .wrapper-pendaftaran .form .input-field .btn {
+    width: 20%;
+    margin-left: auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 0px;
+    background: #dc2f02;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+  }
+  
+  .wrapper-pendaftaran .form .input-field .btn:hover,
+  .wrapper-pendaftaran .form .input-field input[type="reset"] {
+    background: #ff5d34;
+  }
+  
+  .wrapper-pendaftaran .form .input-field input[type="reset"] {
+    color: #dc2f02;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: auto;
+  }
+  @media (max-width: 420px) {
+    .wrapper-pendaftaran .form .input-field {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper-pendaftaran .form .input-field label {
+      margin-bottom: 5px;
+    }
+  }
 
 /* ------------- 
   PENGURUS STYLE 
@@ -223,6 +252,7 @@ body {
 .wrapper-pengurus .jumbotron {
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(../img/header-jumbotron.jpg);
+    
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -232,6 +262,8 @@ body {
   font-weight: 400;
   font-size: 55px;
   color: var(--putih);
+
+
   letter-spacing: 6px;
 }
 .tree,

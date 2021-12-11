@@ -11936,7 +11936,6 @@ body{
   PENGURUS STYLE 
   ----------------*/
   .wrapper-pengurus .jumbotron{
-      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../image/header-jumbotron.jpg');
       height: 50vh;
       background-size: cover;
       background-position: center;

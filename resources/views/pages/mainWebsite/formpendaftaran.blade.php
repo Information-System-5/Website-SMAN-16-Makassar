@@ -1,9 +1,15 @@
 @extends('layout.mainLayout')
 
 @section('main')
-    <div class="wrapper">
+    @if (session('status'))
+      <div class="alert alert-success">
+        {{session('status')}}
+      </div>
+    @endif
+    <div class="wrapper-pendaftaran">
       <div class="title">Form Pendaftaran</div>
-      <form>
+      <form method="post" action="/formpendaftaran">
+        @csrf
         <div class="form">
           <div class="input-field">
             <div class="token">
@@ -11,70 +17,73 @@
               <input type="text" class="input" />
             </div>
           </div>
-
+        
           <div class="input-field">
-            <label> Nama Lengkap </label>
-            <input type="text" class="input" />
+            <label for="namaLengkap"> Nama Lengkap </label>
+            <input type="text" class="input @error('namaLengkap') is-invalid @enderror" name="namaLengkap" id="namaLengkap"/>
+            @error('namaLengkap')
+              <div class="invalid-feedback"> {{$message}} </div>
+            @enderror
           </div>
 
           <div class="input-field">
-            <label> Kelas </label>
-            <input type="text" class="input" />
+            <label for="kelas"> Kelas </label>
+            <input type="text" class="input @error('kelas') is-invalid @enderror" name="kelas" id="kelas"/>
           </div>
 
           <div class="input-field">
-            <label> Jenis Kelamin </label>
+            <label for="jenisKelamin"> Jenis Kelamin </label>
             <div class="radio">
-              <input type="radio" name="jenis-kelamin" value="Laki-laki" />
+              <input type="radio" name="jenisKelamin" value="Laki-laki" id="jenisKelamin"/>
               <label>Laki-laki</label>
-              <input type="radio" name="jenis-kelamin" value="Perempuan" />
+              <input type="radio" name="jenisKelamin" value="Perempuan" id="jenisKelamin"/>
               <label>Perempuan</label>
             </div>
           </div>
 
           <div class="input-field">
-            <label> Tempat Lahir </label>
-            <input type="text" class="input" />
+            <label for="tempatLahir"> Tempat Lahir </label>
+            <input type="text" class="input @error('tempatLahir') is-invalid @enderror" name="tempatLahir" id="tempatLahir"/>
           </div>
 
           <div class="input-field">
-            <label> Tanggal Lahir </label>
-            <input type="text" class="input" />
+            <label for="tanggalLahir"> Tanggal Lahir </label>
+            <input type="date" class="input @error('tanggalLahir') is-invalid @enderror" name="tanggalLahir" id="tanggalLahir"/>
           </div>
 
           <div class="input-field">
-            <label> Alamat Rumah </label>
-            <input type="text" class="input" />
+            <label for="alamatRumah"> Alamat Rumah </label>
+            <input type="text" class="input @error('alamatRumah') is-invalid @enderror" name="alamatRumah" id="alamatRumah"/>
           </div>
 
           <div class="input-field">
-            <label> Hobi </label>
-            <input type="text" class="input" />
+            <label for="hobi"> Hobi </label>
+            <input type="text" class="input @error('hobi') is-invalid @enderror" name="hobi" id="hobi"/>
           </div>
 
           <div class="input-field">
-            <label> E-mail </label>
-            <input type="email" class="input" />
+            <label for="email"> E-mail </label>
+            <input type="email" class="input @error('email') is-invalid @enderror" name="email" id="email"/>
           </div>
 
           <div class="input-field">
-            <label> No. Telefon (WA) </label>
-            <input type="text" class="input" />
+            <label for="nomorTelepon"> No. Telefon (WA) </label>
+            <input type="text" class="input @error('nomorTelepon') is-invalid @enderror" id="nomorTelepon" name="nomorTelepon" />
           </div>
 
           <div class="input-field">
-            <label> Pengalaman Organisasi </label>
-            <textarea class="textarea"></textarea>
+            <label for="pengalamanOrganisasi"> Pengalaman Organisasi </label>
+            <textarea class="textarea @error('pengalamanOrganisasi') is-invalid @enderror" id="pengalamanOrganisasi" name="pengalamanOrganisasi"></textarea>
           </div>
 
           <div class="input-field">
-            <label> Alasan Masuk Organisasi </label>
-            <textarea class="textarea"></textarea>
+            <label for="alasanMasukOrganisasi"> Alasan Masuk Organisasi </label>
+            <textarea class="textarea @error('alasanMasukOrganisasi') is-invalid @enderror" id="alasanMasukOrganisasi" name="alasanMasukOrganisasi"></textarea>
           </div>
 
           <div class="input-field">
             <input type="reset" value="clear" />
-            <input type="submit" value="Daftar" class="btn" />
+            <button type="submit" class="btn">Daftar</button>
           </div>
         </div>
       </form>

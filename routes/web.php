@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardPrestasiController;
+use App\Http\Controllers\DashboardPendaftarController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -18,17 +19,17 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
 // Admin
-Route::get('/admin/listpeserta', function () {
-    return view('pages.dashboardAdmin.listpendaftar');
-});
 
+//Pendaftar
+Route::get('/admin/listpendaftar', [DashboardPendaftarController::class, 'index']);
+Route::get('/admin/detailpendaftar/{pendaftar}', [DashboardPendaftarController::class, 'show']);
+Route::delete('/admin/listpendaftar/{pendaftar}', [DashboardPendaftarController::class, 'destroy']);
+
+//Artikel
 Route::resource('/admin/artikel', DashboardArtikelController::class);
 
+//Prestasi
 Route::resource('/admin/prestasi', DashboardPrestasiController::class);
-
-// Route::get('/admin/prestasi', function () {
-//     return view('pages.dashboardAdmin.prestasi');
-// });
 
 Route::get('/admin/pengurus', function () {
     return view('pages.dashboardAdmin.pengurus.pengurus');
@@ -37,10 +38,6 @@ Route::get('/admin/pengurus', function () {
 Route::get('/detailpendaftar', function () {
     return view('pages.dashboardAdmin.detailpendaftar');
 });
-
-// Route::get('/prestasi/detail', function () {
-//     return view('pages.dashboardAdmin.detailprestasi');
-// });
 
 // Main Website
 
@@ -51,6 +48,7 @@ Route::get('/home', function () {
 Route::get('/formpendaftaran', function () {
     return view('pages.mainWebsite.formpendaftaran');
 });
+Route::post('/formpendaftaran', [DashboardPendaftarController::class, 'store']);
 
 Route::get('/artikel', function () {
     return view('pages.mainWebsite.artikel');

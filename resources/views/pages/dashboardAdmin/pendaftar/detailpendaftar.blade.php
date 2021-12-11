@@ -15,47 +15,47 @@
                             <table class=" table">
                                 <tr>
                                     <th width="200px">Nama Lengkap</th>
-                                    <td>Tiger Nixon</td>
+                                    <td>{{$pendaftar->namaLengkap}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Kelas</th>
-                                    <td>XII MIPA 1</td>
+                                    <td>{{$pendaftar->kelas}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Jenis Kelamin</th>
-                                    <td>Perempuan</td>
+                                    <td>{{$pendaftar->jenisKelamin}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Tempat Lahir</th>
-                                    <td>Makassar</td>
+                                    <td>{{$pendaftar->tempatLahir}}</td>
                                 </tr>
                                 <tr>
-                                    <th width="200px">Tanggal Lahirk</th>
-                                    <td>9 April 2001</td>
+                                    <th width="200px">Tanggal Lahir</th>
+                                    <td>{{$pendaftar->tanggalLahir}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Alamat Rumah</th>
-                                    <td>Vila Mutiara Biru Iv No 3</td>
+                                    <td>{{$pendaftar->alamatRumah}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Hobi</th>
-                                    <td>Main Basket</td>
+                                    <td>{{$pendaftar->hobi}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Email</th>
-                                    <td>lalala@gmail.com</td>
+                                    <td>{{$pendaftar->email}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">No.Telefon(WA)</th>
-                                    <td>087683927272829</td>
+                                    <td>{{$pendaftar->nomorTelepon}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Pengalaman Organisasi</th>
-                                    <td>Anggota paskibra Smp 25 Makassar</td>
+                                    <td>{{$pendaftar->pengalamanOrganisasi}}</td>
                                 </tr>
                                 <tr>
                                     <th width="200px">Alasan MAsuk Organisasi</th>
-                                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quod possimus, recusandae, atque deserunt, fugiat perspiciatis sapiente quidem asperiores sint earum. Veritatis aliquam culpa veniam eligendi esse! Repellat, sed illo?</td>
+                                    <td>{{$pendaftar->alasanMasukOrganisasi}}</td>
                                 </tr>
                             </table>
                         </div>
