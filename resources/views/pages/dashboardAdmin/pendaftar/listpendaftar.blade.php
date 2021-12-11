@@ -13,16 +13,16 @@
                                 Pendaftar Paraga Scout
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple" cellspacing="0" width="100%">
+                                <table id="datatablesSimple" cellspacing="0" width="100%" class="table table-bordered border-primary">
                                     <thead>
                                         <tr align="center">
-                                            <th>No</th>
-                                            <th>Checkbox</th>
+                                            <th width="3px">No</th>
+                                            <th width="10px">Checkbox</th>
                                             <th>Nama</th>
                                             <th>Email</th>
-                                            <th>Nomor Telepon</th>
-                                            <th>Detail</th>
-                                            <th>Hapus</th>
+                                            <th width="150px">Nomor Telepon</th>
+                                            <th width="150px">Detail</th>
+                                            <th width="20px">Hapus</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -33,12 +33,14 @@
                                                 <td>{{$pdftr->namaLengkap}}</td>
                                                 <td>{{$pdftr->email}}</td>
                                                 <td>{{$pdftr->nomorTelepon}}</td>
-                                                <td><a href="/admin/detailpendaftar/{{$pdftr->id}}">Lebih detail</a></td>
-                                                <td><form action="/admin/listpendaftar/{{$pdftr->id}}" method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button><div class="fa fa-trash" color="red"></div></button>
-                                                </form></td>
+                                                <td align="center"><a href="/admin/detailpendaftar/{{$pdftr->id}}">Lebih detail</a></td>
+                                                <td align="center">
+                                                    <form action="/admin/listpendaftar/{{$pdftr->id}}" method="post">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button class="delete-btn"><div class="fa fa-trash" color="red"></div></button>
+                                                    </form>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
