@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\pendaftar;
+use App\Rules\tokenPendaftaran;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
 
@@ -39,6 +40,7 @@ class DashboardPendaftarController extends Controller
     {
 
         $request->validate([
+            'token' => new tokenPendaftaran, 
             'namaLengkap' =>'required',
             'kelas' => 'required',
             'tempatLahir' => 'required',

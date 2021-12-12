@@ -90,7 +90,7 @@ body {
  /* ------------- 
   PENDAFTARAN STYLE 
   ----------------*/
-.wrapper-pendaftaran {
+  .wrapper-pendaftaran {
     max-width: 700px;
     width: 100%;
     margin: 20px auto;
@@ -104,13 +104,13 @@ body {
     color: var(--merah-3);
   }
   
-  .wrapper-pendaftaran hr{
-      width: 150px;
-      height: 1px;
-      background-color: var(--hitam);
-      margin-bottom: 40px;
+  .wrapper-pendaftaran hr {
+    width: 150px;
+    height: 1px;
+    background-color: var(--hitam);
+    margin-bottom: 40px;
   }
-
+  
   .wrapper-pendaftaran .form {
     width: 100%;
   }
@@ -150,34 +150,6 @@ body {
   .wrapper-pendaftaran .form .input-field .radio label {
     margin-left: 5px;
   }
-  input[type="radio"]::before {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    /* top: -2px;
-    left: -1px; */
-    position: relative;
-    background-color: #e2e2e2;
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-  }   
-  
-  input[type="radio"]:checked:after {
-    outline: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    /* top: -23.5px;
-    left: 4.5px; */
-    position: relative;
-  
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    background-color: #696969;
-  }
   
   .wrapper-pendaftaran .form .input-field .input:focus,
   .wrapper-pendaftaran .form .input-field .textarea:focus {
@@ -198,7 +170,7 @@ body {
   .wrapper-pendaftaran .form .input-field .token .input {
     width: 30%;
     outline: none;
-    border: 2px solid var(--kuning-6);
+    border: 2px solid var(--kuning-7);
     border-radius: 5px;
     padding: 4px 5px;
     font-size: 15px;
@@ -206,7 +178,6 @@ body {
   }
   .wrapper-pendaftaran .form .input-field .token .input:focus {
     border: 2px solid var(--kuning-6);
-    color: var(--putih);
   }
   
   .wrapper-pendaftaran .form .input-field .btn {
@@ -245,7 +216,6 @@ body {
       margin-bottom: 5px;
     }
   }
-
 /* ------------- 
   PENGURUS STYLE 
   ----------------*/

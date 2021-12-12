@@ -47,14 +47,18 @@ Route::get('/home', function () {
     return view('pages.mainWebsite.index');
 });
 
+Route::get('/formpendaftaran', function () {
+    return view('pages.mainWebsite.formpendaftaran');
+});
 Route::post('/formpendaftaran', [DashboardPendaftarController::class, 'store']);
 
 Route::get('/artikel', function () {
     return view('pages.mainWebsite.artikel');
 });
 
+
 //pengurus
-Route::get('/pengurus', [PagesController::class, 'pengurusMainWebsite']);
+Route::get('/pengurus', [DashboardPengurusController::class, 'index']);
 
 Route::get('/prestasi', function () {
     return view('pages.mainWebsite.prestasi');
@@ -66,4 +70,7 @@ Route::get('/previewartikel', function () {
 
 Route::get('/visi-misi', function () {
     return view('pages.mainWebsite.visimisi');
+});
+Route::get('/loginAdmin', function () {
+    return view('pages.dashboardAdmin.login');
 });
