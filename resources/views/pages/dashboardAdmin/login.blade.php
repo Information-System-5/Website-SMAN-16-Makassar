@@ -28,14 +28,22 @@
 
       <div class="login-info">
         <h1>Login</h1>
-        <div class="login-input">
-          <input type="text" placeholder="Username" />
-          <input type="text" placeholder="Password" />
-        </div>
-        <a href="">Lupa password?</a>
-        <div class="button">
-          <button type="button" class="btn btn-warning">Login</button>
-        </div>
+        <form method="post" action="/login">
+          @csrf
+          <div class="login-input">
+            <input type="text" placeholder="username" name="name"/>
+            <input type="password" placeholder="Password" name="password" />
+          </div>
+          <a href="">Lupa password?</a>
+          @if(session('message'))
+            <div class="alert alert-danger" role="alert">
+              {{session('message')}}
+            </div>
+          @endif
+          <div class="button">
+            <button type="submit" class="btn btn-warning">Login</button>
+          </div>
+        </form>
       </div>
   </div>
 </body>
