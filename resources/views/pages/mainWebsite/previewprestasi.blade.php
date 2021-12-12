@@ -90,3 +90,9 @@
    </div>
    <!-- ==END OF MAIN CONTENT== -->
 @endsection
+
+{{-- @push('addon-script')
+    <script>
+        document.getElementsByClassName('jumbotron').style.backgroundImage="url({{asset('storage/'. $datas->picture)}})"; // specify the image path here
+    </script>
+@endpush --}}

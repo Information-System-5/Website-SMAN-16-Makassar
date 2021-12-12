@@ -17,8 +17,10 @@
 
          <!-- SEARCH BAR -->
            <div class="search-bar">
-            <input type="text" placeholder="Pencarian">
-            <a href="" type="button"><i class="fas fa-search"></i></a>
+            <form action="/artikel">
+              <input type="text" placeholder="Pencarian" name="search" value="{{request('search')}}">
+              <button class="bg-transparent border-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
            </div>
 
             <div class="preview-card">
@@ -40,7 +42,7 @@
                       {!!Str::limit($data->isi_artikel, 150, '...')!!}
                     </p>
                     <h4 class="card-author">{{$data->penulis_artikel}}</h4>
-                    <h4 class="card-date">{{$data->created_at}}</h4>
+                    <h4 class="card-date">{{$data->waktu_dibuat_artikel}}</h4>
                     <div class="link-preview">
                       <a href="{{url("/artikel/{$data->judul_artikel}")}}">Baca Selengkapnya disini<i class="fas fa-arrow-right pl-2"></i></a>
                     </div>

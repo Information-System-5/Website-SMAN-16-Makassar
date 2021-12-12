@@ -14,7 +14,7 @@
           <div class="input-field">
             <div class="token">
               <label> Token </label>
-              <input type="text" class="input" />
+              <input type="text" class="input" name="token" />
             </div>
           </div>
         

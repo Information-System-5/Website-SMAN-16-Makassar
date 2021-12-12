@@ -150,34 +150,6 @@ body {
 .wrapper-pendaftaran .form .input-field .radio label {
     margin-left: 5px;
 }
-input[type="radio"]::before {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    /* top: -2px;
-    left: -1px; */
-    position: relative;
-    background-color: #e2e2e2;
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-}
-
-input[type="radio"]:checked:after {
-    outline: none;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    /* top: -23.5px;
-    left: 4.5px; */
-    position: relative;
-
-    content: "";
-    display: inline-block;
-    visibility: visible;
-    background-color: #696969;
-}
 
 .wrapper-pendaftaran .form .input-field .input:focus,
 .wrapper-pendaftaran .form .input-field .textarea:focus {
@@ -198,7 +170,7 @@ input[type="radio"]:checked:after {
 .wrapper-pendaftaran .form .input-field .token .input {
     width: 30%;
     outline: none;
-    border: 2px solid var(--kuning-6);
+    border: 2px solid var(--kuning-7);
     border-radius: 5px;
     padding: 4px 5px;
     font-size: 15px;
@@ -206,7 +178,6 @@ input[type="radio"]:checked:after {
 }
 .wrapper-pendaftaran .form .input-field .token .input:focus {
     border: 2px solid var(--kuning-6);
-    color: var(--putih);
 }
 
 .wrapper-pendaftaran .form .input-field .btn {
@@ -245,7 +216,6 @@ input[type="radio"]:checked:after {
         margin-bottom: 5px;
     }
 }
-
 /* ------------- 
   PENGURUS STYLE 
   ----------------*/
@@ -513,7 +483,7 @@ input[type="radio"]:checked:after {
   ----------------*/
 .wrapper-prestasi .konten .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("../dist/img/header-jumbotron.jpg");
+        url("../img/header-jumbotron.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -607,7 +577,7 @@ input[type="radio"]:checked:after {
 }
 .wrapper-preview .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("../image/header-jumbotron.jpg");
+        url("../img/header-jumbotron.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -704,7 +674,7 @@ input[type="radio"]:checked:after {
   ----------------*/
 .wrapper-visi .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url("../image/header-jumbotron.jpg");
+        url("../img/header-jumbotron.jpg");
     height: 90vh;
     background-size: cover;
     background-position: center;
@@ -736,7 +706,7 @@ input[type="radio"]:checked:after {
   HOMEPAGE STYLE 
   ----------------*/
 .wrapper-homepage .konten .jumbotron {
-    background: url("../image/header-jumbotron.jpg");
+    background: url("../img/header-jumbotron.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;

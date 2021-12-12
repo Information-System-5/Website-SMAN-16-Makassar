@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardPengurusController;
 use App\Http\Controllers\DashboardPrestasiController;
 use App\Http\Controllers\PrestasiController;
 use App\Http\Controllers\DashboardPendaftarController;
+use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -45,22 +46,20 @@ Route::put('/admin/pengurus/{pengurus}', [DashboardPengurusController::class, 'u
 Route::get('/admin/pengurus', [DashboardPengurusController::class, 'index'])->name('admin.pengurus.index');
 
 // Main Website
+Route::resource('/', HomepageController::class);
+// Route::get('/', function () {
+//     return view('pages.mainWebsite.index');
+// });
 
-Route::get('/home', function () {
-    return view('pages.mainWebsite.index');
+Route::get('/formpendaftaran', function () {
+    return view('pages.mainWebsite.formpendaftaran');
 });
-
 Route::post('/formpendaftaran', [DashboardPendaftarController::class, 'store']);
 
 Route::resource('/artikel', ArtikelController::class);
-// Route::get('/artikel', function () {
-//     return view('pages.mainWebsite.artikel');
-// });
-
-// Route::get('/artikel', [ArtikelController::class, 'index']);
 
 //pengurus
-Route::get('/pengurus', [PagesController::class, 'pengurusMainWebsite']);
+Route::get('/pengurus', [DashboardPengurusController::class, 'index']);
 
 Route::get('/previewartikel', function () {
     return view('pages.mainWebsite.previewartikel');
@@ -68,4 +67,7 @@ Route::get('/previewartikel', function () {
 
 Route::get('/visi-misi', function () {
     return view('pages.mainWebsite.visimisi');
+});
+Route::get('/loginAdmin', function () {
+    return view('pages.dashboardAdmin.login');
 });

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\pendaftar;
+use App\Rules\tokenPendaftaran;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade as PDF;
+// use Barryvdh\DomPDF\Facade as PDF;
 
 class DashboardPendaftarController extends Controller
 {
@@ -39,6 +40,7 @@ class DashboardPendaftarController extends Controller
     {
 
         $request->validate([
+            'token' => new tokenPendaftaran,
             'namaLengkap' => 'required',
             'kelas' => 'required',
             'tempatLahir' => 'required',
@@ -102,17 +104,18 @@ class DashboardPendaftarController extends Controller
         return redirect('/admin/listpendaftar')->with('status', 'Pendaftar berhasil dihapus!');
     }
 
-    public function deleteAll(Pendaftar $pendaftar){
-        $ids = $pendaftar->ids;
-        pendaftar::whereIn('id',$ids)->delete();
-        return response()->json(['success'=>"Pendaftar Deleted successfully."]);
-    }
-    
-    public function cetak_pdf()
+    public function deleteAll(Pendaftar $pendaftar)
     {
-    	$pendaftar = pendaftar::all();
- 
-    	$pdf = PDF::loadview('pendaftar_pdf',['pendaftar'=>$pendaftar]);
-    	return $pdf->download('laporan-pendaftar-pdf');
+        $ids = $pendaftar->ids;
+        pendaftar::whereIn('id', $ids)->delete();
+        return response()->json(['success' => "Pendaftar Deleted successfully."]);
     }
+
+    // public function cetak_pdf()
+    // {
+    //     $pendaftar = pendaftar::all();
+
+    //     $pdf = PDF::loadview('pendaftar_pdf', ['pendaftar' => $pendaftar]);
+    //     return $pdf->download('laporan-pendaftar-pdf');
+    // }
 }

@@ -26,6 +26,27 @@
         <div class="wrapper-card mb-2">
           <div class="card-artikel ">
             <div class="row mb-2">
+              @forelse ($datas as $data)
+              <div class="col-md-4 col-sm-12">
+                <a href="artikel.php">
+                  <div class="card h-100">
+                    <div class="foto-card">
+                      {{-- <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="..."> --}}
+                      <img src="{{asset('storage/'. $data->gambar_artikel)}}" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                      <p>{{$data->judul_artikel}}</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              @empty
+                <h3 class="card-title">Tidak ada postingan</h3>
+              @endforelse
+
+            </div>
+            {{-- <div class="row">
 
               <div class="col-md-4 col-sm-12">
                 <a href="artikel.php">
@@ -39,79 +60,10 @@
                   </div>
                 </a>
               </div>
-
-              <div class="col-md-4 col-sm-12 ">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="../dist/img/logo.jpeg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan  dasd asdas ad Kemerdekaan  dasd asdas addasdas</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-4 col-sm-12 ">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan Indonesia</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-            </div>
-            <div class="row">
-
-              <div class="col-md-4 col-sm-12">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                    <div class="foto-card">
-                      <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan Indonesia</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-4 col-sm-12">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="../dist/img/logo.jpeg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan  dasd asdas ad Kemerdekaan  dasd asdas addasdas</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-4 col-sm-12 ">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan Indonesia</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-            </div>
+            </div> --}}
           
             <div class="text-right lainnya mb-5">
-              <a href="">Artikel Lainnya </a><i class="fas fa-arrow-right pl-2"></i>
+              <a href="/artikel">Artikel Lainnya </a><i class="fas fa-arrow-right pl-2"></i>
             </div>
           </div>
         </div>
@@ -121,48 +73,25 @@
         <div class="wrapper-card mb-2">
           <div class="card-artikel ">
             <div class="row mb-2">
-
+              @forelse ($datas2 as $data)
               <div class="col-md-4 col-sm-12">
                 <a href="artikel.php">
                   <div class="card h-100">
                     <div class="foto-card">
-                      <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="...">
+                      {{-- <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="..."> --}}
+                      <img src="{{asset('storage/'. $data->picture)}}" class="card-img-top">
                     </div>
                     <div class="card-body">
-                      <p>Sejarah Kemerdekaan Indonesia</p>
+                      <p>{{$data->title}}</p>
                     </div>
                   </div>
                 </a>
               </div>
-
-              <div class="col-md-4 col-sm-12 ">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="assets/image/logo.jpeg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan  dasd asdas ad Kemerdekaan  dasd asdas addasdas</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-4 col-sm-12 ">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="assets/image/header-jumbotron.jpg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan Indonesia</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
+              @empty
+                <h3 class="card-title">Tidak ada postingan</h3>
+              @endforelse
             </div>
-            <div class="row">
+            {{-- <div class="row">
 
               <div class="col-md-4 col-sm-12">
                 <a href="artikel.php">
@@ -177,33 +106,9 @@
                 </a>
               </div>
 
-              <div class="col-md-4 col-sm-12">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="assets/image/logo.jpeg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan  dasd asdas ad Kemerdekaan  dasd asdas addasdas</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              
 
-              <div class="col-md-4 col-sm-12 ">
-                <a href="artikel.php">
-                  <div class="card h-100">
-                      <div class="foto-card">
-                        <img src="assets/image/header-jumbotron.jpg" class="card-img-top" alt="...">
-                      </div>
-                    <div class="card-body">
-                      <p>Sejarah Kemerdekaan Indonesia</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-            </div>
+            </div> --}}
           
             <div class="text-right lainnya mb-5">
               <a href="">Prestasi Lainnya </a><i class="fas fa-arrow-right pl-2"></i>

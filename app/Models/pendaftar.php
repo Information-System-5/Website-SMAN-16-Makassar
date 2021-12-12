@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class pendaftar extends Model
 {
     use HasFactory;
-    protected $fillable = ['namaLengkap', 'kelas', 'jenisKelamin', 'tempatLahir', 'tanggalLahir', 'alamatRumah', 'hobi', 'email', 'nomorTelepon', 'pengalamanOrganisasi', 'alasanMasukOrganisasi'];
+    protected $fillable = ['token','namaLengkap', 'kelas', 'jenisKelamin', 'tempatLahir', 'tanggalLahir', 'alamatRumah', 'hobi', 'email', 'nomorTelepon', 'pengalamanOrganisasi', 'alasanMasukOrganisasi'];
 }
