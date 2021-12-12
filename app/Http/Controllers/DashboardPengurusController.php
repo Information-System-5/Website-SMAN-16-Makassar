@@ -96,4 +96,9 @@ class DashboardPengurusController extends Controller
     {
         //
     }
+    public function tampilPengurus()
+    {
+        $pengurus = pengurus::all();
+        return view('pages/mainWebsite/pengurus', compact('pengurus'));
+    }
 }

@@ -39,7 +39,7 @@ Route::get('/artikel', function () {
 
 
 //pengurus
-// Route::get('/pengurus', [DashboardPengurusController::class, 'index']);
+Route::get('/pengurus', [DashboardPengurusController::class, 'tampilPengurus']);
 
 Route::get('/prestasi', function () {
     return view('pages.mainWebsite.prestasi');
@@ -74,6 +74,6 @@ Route::group(['middleware'=>'auth'], function(){
     //Pengurus
     Route::get('/admin/editPengurus/{pengurus}', [DashboardPengurusController::class, 'edit']);
     Route::put('/admin/pengurus/{pengurus}', [DashboardPengurusController::class, 'update']);
-    Route::get('/admin/pengurus', [DashboardPengurusController::class, 'index'])->name('admin.pengurus.index');
+    Route::get('/admin/pengurus', [DashboardPengurusController::class, 'index']);
 
 });
