@@ -16,13 +16,29 @@
                                         Formulir Prestasi
                                     </div>
                                     {{-- Form Input Prestasi --}}
-                                    <form class="px-4" method="POST" action="/admin/prestasi/{{$datas->title}}">
+                                    <form class="px-4" method="POST" action="/admin/prestasi/{{$datas->title}}" enctype="multipart/form-data">
                                         @method('put')
                                         @csrf
                                         <div class="mt-3 mb-3">
                                             <label for="title" class="form-label">Judul Prestasi</label>
                                             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{old('title', $datas->title)}}">
                                             @error('title')
+                                                <div class="invalid-feedback">
+                                                    {{$message}}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="hidden" name="oldImage" value="{{$datas->picture}}">
+                                            @if ($datas->picture)
+                                                <img src="{{asset('storage/'. $datas->picture)}}" class="img-preview img-fluid col-sm-4 d-block">
+                                            @else
+                                                <img class="img-preview img-fluid col-sm-4">
+                                            @endif
+                                            
+                                            <label for="picture" class="form-label"></label>
+                                            <input onchange="previewImage()" class="form-control @error('picture') is-invalid @enderror" type="file" id="picture" name="picture" required autofocus>
+                                            @error('picture')
                                                 <div class="invalid-feedback">
                                                     {{$message}}
                                                 </div>
@@ -53,6 +69,23 @@
 
 @push('addon-script')
     <script>
+        document.addEventListener('trix-file-accept', function(e){
+            e.preventDefault();
+        })
+
+        function previewImage() {
+            const image = document.querySelector('#picture');
+            const imgPreview = document.querySelector('.img-preview');
+            imgPreview.style.display = 'block';
+
+            const ofReader = new FileReader();
+            ofReader.readAsDataURL(image.files[0])
+
+            ofReader.onload = function(oFREevent){
+                imgPreview.src = oFREevent.target.result;
+            }
+        }
+
         document.addEventListener('trix-file-accept', function(e){
             e.preventDefault();
         })

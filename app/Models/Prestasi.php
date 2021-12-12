@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prestasi extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['title', 'body', 'picture'];
 
     public function getRouteKeyName()
     {

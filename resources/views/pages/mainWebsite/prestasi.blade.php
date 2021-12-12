@@ -1,4 +1,4 @@
-@extends('layout.mainLayout2')
+@extends('layout.mainLayout')
 
 @section('main')
     <!-- ==MAIN CONTENT== -->
@@ -29,11 +29,12 @@
                 <div class="card mb-12">
                   <div class="row g-0 pt-2 pl-2">
                     <div class="col-md-4">
-                      <img
+                      {{-- <img
                           src="../dist/img/header-jumbotron.jpg"
                           alt="Trendy Pants and Shoes"
                           class=""
-                      />
+                      /> --}}
+                      <img src="{{asset('storage/'. $data->picture)}}" class="img-preview img-fluid">
                     </div>
                     <div class="col-md-8">
                       <div class="card-body">
@@ -44,7 +45,7 @@
                         </p>
                         <div class="link-prestasi">
                           {{-- <a href="">{{url("/detail-prestasi/{$data->title}")}}<i class="fas fa-arrow-right pl-2"></i></a> --}}
-                          <a href="">Baca Selengkapnya disini<i class="fas fa-arrow-right pl-2"></i></a>  
+                          <a href="{{url("/prestasi/{$data->title}")}}">Baca Selengkapnya disini<i class="fas fa-arrow-right pl-2"></i></a>  
                         </div>
                       </div>
                     </div>

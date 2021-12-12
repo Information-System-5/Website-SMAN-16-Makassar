@@ -18,7 +18,7 @@
                     Prestasi
                 </a>
                 <div class="sb-sidenav-menu-heading">Pendaftar</div>
-                <a class="nav-link" href="{{url('/admin/listpeserta')}}">
+                <a class="nav-link" href="{{url('/admin/listpendaftar')}}">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Pendaftar
                 </a>

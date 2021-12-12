@@ -16,12 +16,22 @@
                                         Formulir Prestasi
                                     </div>
                                     {{-- Form Input Prestasi --}}
-                                    <form class="px-4" method="POST" action="/admin/prestasi">
+                                    <form class="px-4" method="POST" action="/admin/prestasi" enctype="multipart/form-data">
                                         @csrf
                                         <div class="mt-3 mb-3">
                                           <label for="title" class="form-label">Judul Prestasi</label>
                                           <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" required autofocus value="{{old('title')}}">
                                           @error('title')
+                                                <div class="invalid-feedback">
+                                                    {{$message}}
+                                                </div>
+                                            @enderror
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="img-preview img-fluid col-sm-4">
+                                            <label for="picture" class="form-label"></label>
+                                            <input onchange="previewImage()" class="form-control @error('picture') is-invalid @enderror" type="file"  id="picture" name="picture" required autofocus>
+                                            @error('picture')
                                                 <div class="invalid-feedback">
                                                     {{$message}}
                                                 </div>
@@ -52,6 +62,24 @@
 
 @push('addon-script')
     <script>
+        document.addEventListener('trix-file-accept', function(e){
+            e.preventDefault();
+        })
+    </script>
+    <script>
+        function previewImage() {
+            const image = document.querySelector('#picture');
+            const imgPreview = document.querySelector('.img-preview');
+            imgPreview.style.display = 'block';
+    
+            const ofReader = new FileReader();
+            ofReader.readAsDataURL(image.files[0])
+    
+            ofReader.onload = function(oFREevent){
+                imgPreview.src = oFREevent.target.result;
+            }
+        }
+        
         document.addEventListener('trix-file-accept', function(e){
             e.preventDefault();
         })

@@ -89,7 +89,7 @@ body {
 
 /* ------------- 
   PENDAFTARAN STYLE 
-  ----------------*/
+  ---------------- */
 .wrapper-pendaftaran {
     max-width: 700px;
     width: 100%;
@@ -150,6 +150,34 @@ body {
 .wrapper-pendaftaran .form .input-field .radio label {
     margin-left: 5px;
 }
+input[type="radio"]::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    /* top: -2px;
+    left: -1px; */
+    position: relative;
+    background-color: #e2e2e2;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+    outline: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    /* top: -23.5px;
+    left: 4.5px; */
+    position: relative;
+
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    background-color: #696969;
+}
 
 .wrapper-pendaftaran .form .input-field .input:focus,
 .wrapper-pendaftaran .form .input-field .textarea:focus {
@@ -170,7 +198,7 @@ body {
 .wrapper-pendaftaran .form .input-field .token .input {
     width: 30%;
     outline: none;
-    border: 2px solid var(--kuning-7);
+    border: 2px solid var(--kuning-6);
     border-radius: 5px;
     padding: 4px 5px;
     font-size: 15px;
@@ -178,6 +206,7 @@ body {
 }
 .wrapper-pendaftaran .form .input-field .token .input:focus {
     border: 2px solid var(--kuning-6);
+    color: var(--putih);
 }
 
 .wrapper-pendaftaran .form .input-field .btn {
@@ -222,7 +251,8 @@ body {
   ----------------*/
 .wrapper-pengurus .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url("../image/header-jumbotron.jpg");
+        url(../img/header-jumbotron.jpg);
+
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -232,6 +262,7 @@ body {
     font-weight: 400;
     font-size: 55px;
     color: var(--putih);
+
     letter-spacing: 6px;
 }
 .tree,
@@ -411,7 +442,7 @@ body {
 }
 
 .wrapper-artikel .konten .jumbotron {
-    background: url("../image/header-jumbotron.jpg");
+    background: url("../dist/img/header-jumbotron.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -482,7 +513,7 @@ body {
   ----------------*/
 .wrapper-prestasi .konten .jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("../image/header-jumbotron.jpg");
+        url("../dist/img/header-jumbotron.jpg");
     height: 80vh;
     background-size: cover;
     background-position: center;
@@ -565,4 +596,212 @@ body {
 .wrapper-prestasi .prestasi .card .link-prestasi a {
     font-size: 13px;
     color: var(--merah-2);
+}
+
+/* ------------- 
+    PREVIEW ARTIKEL STYLE 
+    ----------------*/
+.wrapper-preview {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper-preview .jumbotron {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../image/header-jumbotron.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px !important;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-preview .jumbotron-text {
+    color: var(--putih);
+    margin-left: 10%;
+}
+
+.wrapper-preview .jumbotron-text h1 {
+    font-size: 100px;
+}
+.wrapper-preview .jumbotron-text p {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.wrapper-preview .konten {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    position: relative;
+}
+
+.wrapper-preview .search-bar {
+    position: relative;
+    float: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+.wrapper-preview .search-bar input {
+    padding: 8px 10px 2px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--merah-2);
+    outline: none;
+}
+
+.wrapper-preview .search-bar input::placeholder {
+    font-size: 15px;
+    color: var(--merah-2);
+}
+
+.wrapper-preview .search-bar a {
+    color: var(--merah-2);
+}
+
+.wrapper-preview .preview-card {
+    margin-left: 5%;
+    margin-top: 30px;
+}
+
+.wrapper-preview .preview-card .container {
+    display: flex;
+    margin-top: 40px;
+}
+.wrapper-preview .preview-img {
+    width: 30%;
+    height: auto;
+    margin-right: auto;
+}
+.wrapper-preview .preview-img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.wrapper-preview .preview-artikel {
+    width: 65%;
+}
+.card-author {
+    font-size: 19px;
+    color: #faa307;
+    font-weight: bold;
+}
+.card-date {
+    font-size: 15px;
+}
+.wrapper-preview .konten .link-preview {
+    text-align: right;
+}
+
+.wrapper-preview .konten .link-preview a {
+    font-size: 13px;
+    color: var(--merah-2);
+}
+
+/* ------------- 
+  VISI-MISI STYLE 
+  ----------------*/
+.wrapper-visi .jumbotron {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../image/header-jumbotron.jpg");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px !important;
+    color: var(--putih);
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-visi .jumbotron .container h3 {
+    font-weight: 400;
+    font-size: 55px;
+}
+
+.wrapper-visi .jumbotron .container p {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.wrapper-visi-content {
+    margin-top: 50px;
+}
+
+.wrapper-visi-content .content img {
+    width: 45%;
+}
+
+/* ------------- 
+  HOMEPAGE STYLE 
+  ----------------*/
+.wrapper-homepage .konten .jumbotron {
+    background: url("../image/header-jumbotron.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px !important;
+}
+
+.wrapper-homepage .konten .img-deksripsi img {
+    max-width: 50%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.wrapper-homepage .artikel-prestasi-card h4 {
+    font-weight: 510;
+    color: var(--merah-4);
+}
+
+.wrapper-homepage .artikel-prestasi-card hr {
+    border: 1px solid var(--merah-4);
+}
+.wrapper-homepage .wrapper-card .card {
+    border: none;
+}
+.wrapper-homepage .card-artikel .card-img-top {
+    object-fit: cover;
+    height: 35vh;
+    border-radius: 15px;
+}
+
+.wrapper-homepage .card-artikel a {
+    text-decoration: none;
+    color: var(--hitam);
+}
+
+.wrapper-homepage .card-artikel .card-body p {
+    font-size: 20px;
+    font-weight: 540;
+    color: var(--merah-4);
+}
+
+.wrapper-homepage .foto-card {
+    overflow: hidden;
+}
+
+.wrapper-homepage .foto-card img {
+    transition: all 1.3s ease;
+}
+
+.wrapper-homepage .foto-card:hover img {
+    transform: scale(1.1);
+}
+
+.wrapper-homepage .artikel-prestasi-card .lainnya a {
+    font-size: 20px;
+    font-weight: 501;
+    color: var(--merah-4);
+    text-decoration: underline;
+}
+
+.wrapper-homepage .artikel-prestasi-card .lainnya .fas {
+    font-size: 20px;
+    color: var(--merah-4);
 }

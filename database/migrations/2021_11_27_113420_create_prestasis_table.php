@@ -17,6 +17,7 @@ class CreatePrestasisTable extends Migration
             $table->id();
             $table->string("title");
             $table->longText("body");
+            $table->string("picture");
             $table->timestamps();
         });
     }

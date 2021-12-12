@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prestasi;
 use Illuminate\Http\Request;
+use App\Models\artikel;
 
-class PrestasiController extends Controller
+class ArtikelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,8 @@ class PrestasiController extends Controller
      */
     public function index()
     {
-        // $datas = Prestasi::all();
-        // $datas->isi_artikel = Str::limit($this->isi_artikel, 100, '...');
-        return view('pages.mainWebsite.prestasi', [
-            "datas" => Prestasi::latest()->filter(request(['search']))->paginate(5)
+        return view('pages.mainWebsite.artikel', [
+            "datas" => artikel::latest()->filter(request(['search']))->paginate(10)
         ]);
     }
 
@@ -48,10 +46,10 @@ class PrestasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Prestasi $prestasi)
+    public function show(artikel $artikel)
     {
-        return view("pages.mainWebsite.previewprestasi", [
-            'datas' => $prestasi
+        return view('pages.mainWebsite.previewartikel', [
+            "datas" => $artikel
         ]);
     }
 

@@ -12310,6 +12310,9 @@ body {
 /* ------------- 
   PENDAFTARAN STYLE 
   ----------------*/
+.delete-btn{
+  border: none;
+}
 .wrapper-pendaftaran {
     max-width: 700px;
     width: 100%;

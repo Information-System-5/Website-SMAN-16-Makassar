@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Prestasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPrestasiController extends Controller
 {
@@ -43,8 +44,13 @@ class DashboardPrestasiController extends Controller
     {
         $validateData = $request->validate([
             'title' => 'required|unique:prestasis|max:255',
-            'body' => 'required'
+            'body' => 'required',
+            'picture' => 'image|file|max:1024',
         ]);
+
+        if ($request->file('picture')) {
+            $validateData['picture'] = $request->file('picture')->store('post-images');
+        }
 
         Prestasi::create($validateData);
         return redirect('/admin/prestasi')->with('success', 'Prestasi berhasil dibuat');
@@ -86,7 +92,8 @@ class DashboardPrestasiController extends Controller
     public function update(Request $request, Prestasi $prestasi)
     {
         $rules = [
-            'body' => 'required'
+            'body' => 'required',
+            'picture' => 'image|file|max:1024',
         ];
 
         if ($request->title != $prestasi->title) {
@@ -94,6 +101,14 @@ class DashboardPrestasiController extends Controller
         }
 
         $validateData = $request->validate($rules);
+
+        if ($request->file('picture')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validateData['picture'] = $request->file('picture')->store('post-images');
+        }
+
         Prestasi::where('id', $prestasi->id)
             ->update($validateData);
         return redirect('/admin/prestasi')->with("success", "Prestasi berhasil di edit");
