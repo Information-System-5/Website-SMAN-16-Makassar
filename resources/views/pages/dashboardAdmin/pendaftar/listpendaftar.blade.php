@@ -13,11 +13,13 @@
                                 Pendaftar Paraga Scout
                             </div>
                             <div class="card-body">
+                            <button style="margin-bottom: 10px" class="btn btn-primary delete_all" data-url="{{ url('deletAllPendaftar') }}">Hapus Semua</button>
+                            <a href="/pegawai/cetak_pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
                                 <table id="datatablesSimple" cellspacing="0" width="100%" class="table table-bordered border-primary">
                                     <thead>
                                         <tr align="center">
                                             <th width="3px">No</th>
-                                            <th width="10px">Checkbox</th>
+                                            <th width="50px"><input type="checkbox" id="master"></th>
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th width="150px">Nomor Telepon</th>
@@ -26,27 +28,129 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($pendaftar as $pdftr)
-                                            <tr>
-                                                <th scope="row" align="center">{{$loop->iteration}}</th>
-                                                <td align="center"><input type="checkbox"></td>
-                                                <td>{{$pdftr->namaLengkap}}</td>
-                                                <td>{{$pdftr->email}}</td>
-                                                <td>{{$pdftr->nomorTelepon}}</td>
-                                                <td align="center"><a href="/admin/detailpendaftar/{{$pdftr->id}}">Lebih detail</a></td>
-                                                <td align="center">
-                                                    <form action="/admin/listpendaftar/{{$pdftr->id}}" method="post">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <button class="delete-btn"><div class="fa fa-trash" color="red"></div></button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                        @if($pendaftar->count())
+                                            @foreach($pendaftar as $key => $pdftr)
+                                                <tr id="tr_{{$pdftr->id}}">
+                                                    <th scope="row" align="center">{{$loop->iteration}}</th>
+                                                    <td><input type="checkbox" class="sub_chk checkBoxClass" value="{{$pdftr->id}}" data-id="{{$pdftr->id}}" name="ids"></td>
+                                                    <td>{{$pdftr->namaLengkap}}</td>
+                                                    <td>{{$pdftr->email}}</td>
+                                                    <td>{{$pdftr->nomorTelepon}}</td>
+                                                    <td align="center"><a href="/admin/detailpendaftar/{{$pdftr->id}}">Lebih detail</a></td>
+                                                    <td align="center">
+                                                        <form action="/admin/listpendaftar/{{$pdftr->id}}" method="post">
+                                                            @method('delete')
+                                                            @csrf
+                                                            <button class="delete-btn"><div class="fa fa-trash" color="red"></div></button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </main>
+                <script type="text/javascript">
+                    $(document).ready(function () {
+
+
+                        $('#master').on('click', function(e) {
+                        if($(this).is(':checked',true))  
+                        {
+                            $(".sub_chk").prop('checked', true);  
+                        } else {  
+                            $(".sub_chk").prop('checked',false);  
+                        }  
+                        });
+
+
+                        $('.delete_all').on('click', function(e) {
+
+
+                            var allVals = [];  
+                            $(".sub_chk:checked").each(function() {  
+                                allVals.push($(this).attr('data-id'));
+                            });  
+
+
+                            if(allVals.length <=0)  
+                            {  
+                                alert("Please select row.");  
+                            }  else {  
+
+
+                                var check = confirm("Are you sure you want to delete this row?");  
+                                if(check == true){
+                                    var join_selected_values = allVals.join(","); 
+                                    $.ajax({
+                                        url: $(this).data('url'),
+                                        type: 'DELETE',
+                                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                                        data: 'ids='+join_selected_values,
+                                        success: function (data) {
+                                            if (data['success']) {
+                                                $(".sub_chk:checked").each(function() {  
+                                                    $(this).parents("tr").remove();
+                                                });
+                                                alert(data['success']);
+                                            } else if (data['error']) {
+                                                alert(data['error']);
+                                            } else {
+                                                alert('Whoops Something went wrong!!');
+                                            }
+                                        },
+                                        error: function (data) {
+                                            alert(data.responseText);
+                                        }
+                                    });
+
+
+                                $.each(allVals, function( index, value ) {
+                                    $('table tr').filter("[data-row-id='" + value + "']").remove();
+                                });
+                                }  
+                            }  
+                        });
+
+
+                        $('[data-toggle=confirmation]').confirmation({
+                            rootSelector: '[data-toggle=confirmation]',
+                            onConfirm: function (event, element) {
+                                element.trigger('confirm');
+                            }
+                        });
+
+
+                        $(document).on('confirm', function (e) {
+                            var ele = e.target;
+                            e.preventDefault();
+
+
+                            $.ajax({
+                                url: ele.href,
+                                type: 'DELETE',
+                                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                                success: function (data) {
+                                    if (data['success']) {
+                                        $("#" + data['tr']).slideUp("slow");
+                                        alert(data['success']);
+                                    } else if (data['error']) {
+                                        alert(data['error']);
+                                    } else {
+                                        alert('Whoops Something went wrong!!');
+                                    }
+                                },
+                                error: function (data) {
+                                    alert(data.responseText);
+                                }
+                            });
+
+
+                            return false;
+                        });
+                    });
+                </script>
 @endsection

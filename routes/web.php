@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DashboardArtikelController;
+use App\Http\Controllers\DashboardPengurusController;
 use App\Http\Controllers\DashboardPrestasiController;
 use App\Http\Controllers\DashboardPendaftarController;
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -21,9 +23,12 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 // Admin
 
 //Pendaftar
+
 Route::get('/admin/listpendaftar', [DashboardPendaftarController::class, 'index']);
 Route::get('/admin/detailpendaftar/{pendaftar}', [DashboardPendaftarController::class, 'show']);
 Route::delete('/admin/listpendaftar/{pendaftar}', [DashboardPendaftarController::class, 'destroy']);
+Route::delete('/deleteAllPendaftar', [DashboardPendaftarController::class, 'deleteAll'])->name('pendaftar.deleteSelected');
+Route::get('/pendaftar/cetak_pdf', [DashboardPendaftarController::class, 'cetak_pdf']);
 
 //Artikel
 Route::resource('/admin/artikel', DashboardArtikelController::class);
@@ -31,13 +36,10 @@ Route::resource('/admin/artikel', DashboardArtikelController::class);
 //Prestasi
 Route::resource('/admin/prestasi', DashboardPrestasiController::class);
 
-Route::get('/admin/pengurus', function () {
-    return view('pages.dashboardAdmin.pengurus.pengurus');
-});
-
-Route::get('/detailpendaftar', function () {
-    return view('pages.dashboardAdmin.detailpendaftar');
-});
+//Pengurus
+Route::get('/admin/editPengurus/{pengurus}', [DashboardPengurusController::class, 'edit']);
+Route::put('/admin/pengurus/{pengurus}', [DashboardPengurusController::class, 'update']);
+Route::get('/admin/pengurus', [DashboardPengurusController::class, 'index'])->name('admin.pengurus.index');
 
 // Main Website
 
@@ -45,18 +47,14 @@ Route::get('/home', function () {
     return view('pages.mainWebsite.index');
 });
 
-Route::get('/formpendaftaran', function () {
-    return view('pages.mainWebsite.formpendaftaran');
-});
 Route::post('/formpendaftaran', [DashboardPendaftarController::class, 'store']);
 
 Route::get('/artikel', function () {
     return view('pages.mainWebsite.artikel');
 });
 
-Route::get('/pengurus', function () {
-    return view('pages.mainWebsite.pengurus');
-});
+//pengurus
+Route::get('/pengurus', [PagesController::class, 'pengurusMainWebsite']);
 
 Route::get('/prestasi', function () {
     return view('pages.mainWebsite.prestasi');
@@ -69,8 +67,3 @@ Route::get('/previewartikel', function () {
 Route::get('/visi-misi', function () {
     return view('pages.mainWebsite.visimisi');
 });
-
-// Route::get('/admin/artikel', [DetailController::class, 'index'])->name('artikel');
-
-// Route::get('/admin/prestasi', [DetailController::class, 'index'])->name('prestasi');
-// >>>>>>> Stashed changes
