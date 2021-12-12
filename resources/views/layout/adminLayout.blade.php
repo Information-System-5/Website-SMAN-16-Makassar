@@ -7,8 +7,8 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Admin Paraga Scout</title>
-        @stack('prepend-style')
         @include('includes.admin.style')
+        @stack('prepend-style')
     </head>
     <body>
         @include('includes.admin.navbar')

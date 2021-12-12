@@ -17,10 +17,13 @@ class DashboardArtikelController extends Controller
      */
     public function index()
     {
-        $datas = artikel::all();
-        // $datas->isi_artikel = Str::limit($this->isi_artikel, 100, '...');
+        // $datas = artikel::all();
+        // return view('pages.dashboardAdmin.artikel.artikel', [
+        //     "datas" => $datas
+        // ]);
+
         return view('pages.dashboardAdmin.artikel.artikel', [
-            "datas" => $datas
+            "datas" => artikel::latest()->filter(request(['search']))->paginate(10)
         ]);
     }
 

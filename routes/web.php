@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\DashboardArtikelController;
 use App\Http\Controllers\DashboardPrestasiController;
+use App\Http\Controllers\PrestasiController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -25,6 +26,8 @@ Route::get('/admin/listpeserta', function () {
 Route::resource('/admin/artikel', DashboardArtikelController::class);
 
 Route::resource('/admin/prestasi', DashboardPrestasiController::class);
+
+Route::resource('/prestasi', PrestasiController::class);
 
 // Route::get('/admin/prestasi', function () {
 //     return view('pages.dashboardAdmin.prestasi');
@@ -58,10 +61,6 @@ Route::get('/artikel', function () {
 
 Route::get('/pengurus', function () {
     return view('pages.mainWebsite.pengurus');
-});
-
-Route::get('/prestasi', function () {
-    return view('pages.mainWebsite.prestasi');
 });
 
 Route::get('/previewartikel', function () {

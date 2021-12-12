@@ -14,10 +14,12 @@ class DashboardPrestasiController extends Controller
      */
     public function index()
     {
-        $datas = Prestasi::all();
-        // $datas->isi_artikel = Str::limit($this->isi_artikel, 100, '...');
+        // $datas = Prestasi::all();
+        // return view('pages.dashboardAdmin.prestasi.prestasi', [
+        //     "datas" => $datas
+        // ]);
         return view('pages.dashboardAdmin.prestasi.prestasi', [
-            "datas" => $datas
+            "datas" => Prestasi::latest()->filter(request(['search']))->paginate(10)
         ]);
     }
 

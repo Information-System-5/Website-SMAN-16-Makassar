@@ -1,57 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
 
 body {
-  font-family: "Work Sans", sans-serif;
-  box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
-  --putih: #fff;
-  --merah-2: #370617;
-  --merah-3: #6a040f;
-  --merah-4: #9d0208;
-  --abu: rgb(194, 194, 194);
-  --kuning-6: #e85d04;
-  --kuning-7: #faa307;
-  --hitam: #000;
+    --putih: #fff;
+    --merah-2: #370617;
+    --merah-3: #6a040f;
+    --merah-4: #9d0208;
+    --abu: rgb(194, 194, 194);
+    --kuning-6: #e85d04;
+    --kuning-7: #faa307;
+    --hitam: #000;
 }
 
 /* ------------- 
   NAVBAR STYLE 
   ----------------*/
 .navbar {
-  background-color: var(--putih);
-  border-bottom: 1px #1d030c10 solid;
+    background-color: var(--putih);
+    border-bottom: 1px #1d030c10 solid;
 }
 
 .navbar-brand {
-  font-weight: 550;
-  font-size: 24px;
+    font-weight: 550;
+    font-size: 24px;
 }
 
 .wrapper-navbar,
 .navbar-toggler {
-  outline: none !important;
-  border: none !important;
+    outline: none !important;
+    border: none !important;
 }
 
 .wrapper-navbar,
 .fa {
-  font-size: 26px;
-  color: var(--merah-3);
+    font-size: 26px;
+    color: var(--merah-3);
 }
 
 .nav-link {
-  font-size: 17px;
-  font-weight: 525;
+    font-size: 17px;
+    font-weight: 525;
 }
 .wrapper-navbar,
 .active {
-  border-bottom: 2px var(--merah-2) solid;
+    border-bottom: 2px var(--merah-2) solid;
 }
 
 .nav-link:hover {
-  color: var(--merah-4);
+    color: var(--merah-4);
 }
 
 /* ------------- 
@@ -59,330 +59,330 @@ body {
   ----------------*/
 
 .container-footer {
-  background-color: var(--merah-2);
-  padding: 20px;
-  color: var(--putih);
-  font-size: 15px;
+    background-color: var(--merah-2);
+    padding: 20px;
+    color: var(--putih);
+    font-size: 15px;
 }
 
 .title {
-  font-weight: 600;
-  font-size: 18px;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .container-footer a {
-  text-decoration: none;
-  color: var(--putih);
-  font-size: 25px;
+    text-decoration: none;
+    color: var(--putih);
+    font-size: 25px;
 }
 
 .container-footer hr {
-  height: 2px;
-  background-color: var(--putih);
+    height: 2px;
+    background-color: var(--putih);
 }
 
 .container-footer .copyright {
-  font-size: 20px;
-  letter-spacing: 4px;
-  font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 4px;
+    font-weight: 500;
 }
 
 /* ------------- 
   PENDAFTARAN STYLE 
   ----------------*/
 .wrapper-pendaftaran {
-  max-width: 700px;
-  width: 100%;
-  margin: 20px auto;
-  padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
 }
 
 .wrapper-pendaftaran .title {
-  font-size: 42px;
-  font-weight: 400;
-  text-align: center;
-  color: var(--merah-3);
+    font-size: 42px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--merah-3);
 }
 
 .wrapper-pendaftaran hr {
-  width: 150px;
-  height: 1px;
-  background-color: var(--hitam);
-  margin-bottom: 40px;
+    width: 150px;
+    height: 1px;
+    background-color: var(--hitam);
+    margin-bottom: 40px;
 }
 
 .wrapper-pendaftaran .form {
-  width: 100%;
+    width: 100%;
 }
 
 .wrapper-pendaftaran .form .input-field {
-  margin-bottom: 15px;
-  align-items: center;
-  display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
 }
 .wrapper-pendaftaran .form .input-field label {
-  width: 200px;
-  margin-right: 10px;
-  font-size: 14px;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 14px;
 }
 
 .wrapper-pendaftaran .form .input-field .input,
 .wrapper-pendaftaran .form .input-field .textarea {
-  width: 100%;
-  outline: none;
-  border: 2px solid var(--abu);
-  border-radius: 5px;
-  padding: 4px 5px;
-  font-size: 15px;
-  transition: all 0.3s ease;
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--abu);
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
 .wrapper-pendaftaran .form .input-field .textarea {
-  width: 100%;
-  height: 100px;
-  resize: none;
+    width: 100%;
+    height: 100px;
+    resize: none;
 }
 
 .wrapper-pendaftaran .form .input-field .radio {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 .wrapper-pendaftaran .form .input-field .radio label {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 .wrapper-pendaftaran .form .input-field .input:focus,
 .wrapper-pendaftaran .form .input-field .textarea:focus {
-  border: 2px solid #696969;
+    border: 2px solid #696969;
 }
 .wrapper-pendaftaran .form .input-field .token label {
-  font-weight: 900;
-  width: 50px;
-  margin-top: 5px;
-  margin-right: 10px;
-  margin-left: auto;
-  font-size: 14px;
+    font-weight: 900;
+    width: 50px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: auto;
+    font-size: 14px;
 }
 .wrapper-pendaftaran .form .input-field .token {
-  width: 100%;
-  display: flex;
+    width: 100%;
+    display: flex;
 }
 .wrapper-pendaftaran .form .input-field .token .input {
-  width: 30%;
-  outline: none;
-  border: 2px solid var(--kuning-7);
-  border-radius: 5px;
-  padding: 4px 5px;
-  font-size: 15px;
-  transition: all 0.3s ease;
+    width: 30%;
+    outline: none;
+    border: 2px solid var(--kuning-7);
+    border-radius: 5px;
+    padding: 4px 5px;
+    font-size: 15px;
+    transition: all 0.3s ease;
 }
 .wrapper-pendaftaran .form .input-field .token .input:focus {
-  border: 2px solid var(--kuning-6);
+    border: 2px solid var(--kuning-6);
 }
 
 .wrapper-pendaftaran .form .input-field .btn {
-  width: 20%;
-  margin-left: auto;
-  padding: 8px 10px;
-  font-size: 14px;
-  border: 0px;
-  background: #dc2f02;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
+    width: 20%;
+    margin-left: auto;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 0px;
+    background: #dc2f02;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
 }
 
 .wrapper-pendaftaran .form .input-field .btn:hover,
 .wrapper-pendaftaran .form .input-field input[type="reset"] {
-  background: #ff5d34;
+    background: #ff5d34;
 }
 
 .wrapper-pendaftaran .form .input-field input[type="reset"] {
-  color: #dc2f02;
-  outline: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  margin-bottom: auto;
+    color: #dc2f02;
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: auto;
 }
 @media (max-width: 420px) {
-  .wrapper-pendaftaran .form .input-field {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .wrapper-pendaftaran .form .input-field label {
-    margin-bottom: 5px;
-  }
+    .wrapper-pendaftaran .form .input-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper-pendaftaran .form .input-field label {
+        margin-bottom: 5px;
+    }
 }
 
 /* ------------- 
   PENGURUS STYLE 
   ----------------*/
 .wrapper-pengurus .jumbotron {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../img/header-jumbotron.jpg);
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0px !important;
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 55px;
-  color: var(--putih);
-  letter-spacing: 6px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../image/header-jumbotron.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px !important;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 55px;
+    color: var(--putih);
+    letter-spacing: 6px;
 }
 .tree,
 .tree ul,
 .tree li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .tree {
-  margin: 0 0 1em;
-  text-align: center;
-  font-size: 17px;
+    margin: 0 0 1em;
+    text-align: center;
+    font-size: 17px;
 }
 
 .tree,
 .tree ul {
-  display: table;
+    display: table;
 }
 
 .tree ul {
-  width: 100%;
+    width: 100%;
 }
 
 .tree .mabigus,
 .tree .pembina {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 .tree .ketua,
 .tree .sekertaris {
-  display: table-cell;
-  padding: 2.5em 0 0;
-  vertical-align: top;
+    display: table-cell;
+    padding: 2.5em 0 0;
+    vertical-align: top;
 }
 .tree .bendhara,
 .tree .pemangku,
 .tree .anggota {
-  display: table-cell;
-  padding: 0.5em 0;
-  vertical-align: top;
+    display: table-cell;
+    padding: 0.5em 0;
+    vertical-align: top;
 }
 
 .tree li:before {
-  outline: solid 2px var(--kuning-7);
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 33px;
+    outline: solid 2px var(--kuning-7);
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 33px;
 }
 
 .tree li:first-child:before {
-  left: 50%;
+    left: 50%;
 }
 
 .tree li:last-child:before {
-  right: 50%;
+    right: 50%;
 }
 
 .tree code,
 .tree span {
-  border: solid 0.2em var(--kuning-7);
-  border-radius: 1.2em;
-  display: inline-block;
-  padding: 0.9em 2.5em;
-  width: 18em;
+    border: solid 0.2em var(--kuning-7);
+    border-radius: 1.2em;
+    display: inline-block;
+    padding: 0.9em 2.5em;
+    width: 18em;
 }
 
 .tree hr {
-  margin-top: 0em;
+    margin-top: 0em;
 }
 
 .tree b {
-  font-size: 23px;
+    font-size: 23px;
 }
 
 .tree code,
 .mabigus span {
-  margin: 0 0.2em 0.9em;
+    margin: 0 0.2em 0.9em;
 }
 
 .tree code,
 .pembina span {
-  margin: 2.6em 0.2em 0.5em;
+    margin: 2.6em 0.2em 0.5em;
 }
 
 .tree code,
 .ketua span {
-  margin: 2.6em 0.2em 0.5em;
+    margin: 2.6em 0.2em 0.5em;
 }
 
 .tree code,
 .sekertaris span {
-  margin: 1.8em 0.2em 0.5em;
+    margin: 1.8em 0.2em 0.5em;
 }
 
 .tree code,
 .bendhara span {
-  margin: 3.5em 0.2em 0;
+    margin: 3.5em 0.2em 0;
 }
 
 .tree code,
 .pemangku span {
-  margin: 3.5em 0.2em 0;
+    margin: 3.5em 0.2em 0;
 }
 
 .tree code,
 .anggota span {
-  margin: 3.5em 0.2em 0.5em;
+    margin: 3.5em 0.2em 0.5em;
 }
 
 .tree ul:before,
 .tree code:before,
 .tree span:before {
-  outline: solid 2px var(--kuning-7);
-  content: "";
-  height: 2em;
-  left: 50%;
-  position: absolute;
+    outline: solid 2px var(--kuning-7);
+    content: "";
+    height: 2em;
+    left: 50%;
+    position: absolute;
 }
 
 .tree code:before,
 .pembina span:before {
-  top: -0.4em;
-  padding-top: 2em;
+    top: -0.4em;
+    padding-top: 2em;
 }
 
 .tree code:before,
 .ketua span:before {
-  top: 2.6em;
+    top: 2.6em;
 }
 .tree code:before,
 .sekertaris span:before,
 .bendhara span:before,
 .pemangku span:before,
 .anggota span:before {
-  top: 1.5em;
+    top: 1.5em;
 }
 
 .tree > li {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .tree > li:before,
 .tree > li:after,
 .tree > li > code:before,
 .tree > li > span:before {
-  outline: none;
+    outline: none;
 }
 
 /* ------------- 
@@ -390,89 +390,179 @@ body {
   ----------------*/
 
 .wrapper-artikel .title h1 {
-  font-size: 56px;
-  font-weight: 600;
+    font-size: 56px;
+    font-weight: 600;
 }
 
 .wrapper-artikel .detail-artikel {
-  display: table;
-  margin: 0 -40px;
+    display: table;
+    margin: 0 -40px;
 }
 
 .wrapper-artikel .detail-artikel ul {
-  list-style: none;
-  color: var(--abu);
-  font-size: 20px;
-  font-weight: 500;
+    list-style: none;
+    color: var(--abu);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .wrapper-artikel .detail-artikel li {
-  display: inline;
+    display: inline;
 }
 
 .wrapper-artikel .konten .jumbotron {
-  background: url(../img/header-jumbotron.jpg);
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0px !important;
+    background: url("../image/header-jumbotron.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px !important;
 }
 
 .wrapper-artikel .konten .isi-konten {
-  text-align: justify;
-  text-indent: 0.5in;
-  font-size: 18px;
-  color: var(--hitam);
+    text-align: justify;
+    text-indent: 0.5in;
+    font-size: 18px;
+    color: var(--hitam);
 }
 
 .wrapper-artikel .artikel-lainnya {
-  margin-top: 80px;
+    margin-top: 80px;
 }
 
 .wrapper-artikel .artikel-lainnya ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
 }
 
-.wrapper-artikel .artikel-lainnya p {
-  font-size: 30px;
-  font-weight: 400;
+.wrapper-artikel .artikel-lainnya li p {
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .wrapper-artikel .artikel-lainnya li a {
-  text-decoration: underline solid 2px var(--kuning-6);
-  color: var(--kuning-6);
+    text-decoration: underline solid 2px var(--kuning-6);
+    color: var(--kuning-6);
 }
 
 .wrapper-artikel .artikel-lainnya hr {
-  margin-top: -30px;
-  margin-bottom: 30px;
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 
 .wrapper-artikel .card-artikel .card-img-top {
-  object-fit: cover;
-  height: 30vh;
+    object-fit: cover;
+    height: 30vh;
 }
 
 .wrapper-artikel .card-artikel a {
-  text-decoration: none;
-  color: var(--hitam);
+    text-decoration: none;
+    color: var(--hitam);
 }
 
-.wrapper-artikel .card-artikel p {
-  font-size: 26px;
-  font-weight: 650;
+.wrapper-artikel .card-artikel .card-body p {
+    font-size: 20px;
+    font-weight: 540;
 }
 
 .wrapper-artikel .foto-card {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .wrapper-artikel .foto-card img {
-  transition: all 1.3s ease;
+    transition: all 1.3s ease;
 }
 
 .wrapper-artikel .foto-card:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* ------------- 
+  PRESTASI STYLE 
+  ----------------*/
+.wrapper-prestasi .konten .jumbotron {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../image/header-jumbotron.jpg");
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0px !important;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-prestasi .jumbotron-text {
+    color: var(--putih);
+}
+
+.wrapper-prestasi .jumbotron-text h1 {
+    font-size: 100px;
+}
+.wrapper-prestasi .jumbotron-text p {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.wrapper-prestasi .search-bar {
+    height: 50px;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.wrapper-prestasi .search-bar input {
+    padding: 8px 10px 2px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--merah-2);
+    outline: none;
+}
+
+.wrapper-prestasi .search-bar input::placeholder {
+    font-size: 15px;
+    color: var(--merah-2);
+}
+
+.wrapper-prestasi .search-bar a {
+    color: var(--merah-2);
+}
+
+.wrapper-prestasi .prestasi .card {
+    border: none;
+    max-width: 700px;
+    margin: auto;
+}
+
+.wrapper-prestasi .prestasi .card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.wrapper-prestasi .prestasi .card hr {
+    border-color: var(--merah-2);
+}
+
+.wrapper-prestasi .prestasi .card .btn {
+    color: var(--putih);
+    background-color: var(--merah-2);
+    font-size: 13px;
+}
+
+.wrapper-prestasi .prestasi .card h3 {
+    font-weight: 505;
+    font-size: 27px;
+}
+
+.wrapper-prestasi .prestasi .card p {
+    font-size: 13px;
+}
+
+.wrapper-prestasi .prestasi .card .link-prestasi {
+    text-align: right;
+}
+
+.wrapper-prestasi .prestasi .card .link-prestasi a {
+    font-size: 13px;
+    color: var(--merah-2);
 }

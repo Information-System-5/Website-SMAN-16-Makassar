@@ -1,7 +1,7 @@
 @extends('layout.mainLayout')
 
 @section('main')
-    <div class="wrapper">
+    <div class="wrapper-pendaftaran">
       <div class="title">Form Pendaftaran</div>
       <form>
         <div class="form">
