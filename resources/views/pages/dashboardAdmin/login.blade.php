@@ -34,7 +34,6 @@
             <input type="text" placeholder="username" name="name"/>
             <input type="password" placeholder="Password" name="password" />
           </div>
-          <a href="">Lupa password?</a>
           @if(session('message'))
             <div class="alert alert-danger" role="alert">
               {{session('message')}}

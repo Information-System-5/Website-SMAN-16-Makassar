@@ -13,13 +13,10 @@
                                 Pendaftar Paraga Scout
                             </div>
                             <div class="card-body">
-                            <button style="margin-bottom: 10px" class="btn btn-primary delete_all" data-url="{{ url('deletAllPendaftar') }}">Hapus Semua</button>
-                            <a href="/pegawai/cetak_pdf" class="btn btn-primary" target="_blank">CETAK PDF</a>
                                 <table id="datatablesSimple" cellspacing="0" width="100%" class="table table-bordered border-primary">
                                     <thead>
                                         <tr align="center">
                                             <th width="3px">No</th>
-                                            <th width="50px"><input type="checkbox" id="master"></th>
                                             <th>Nama</th>
                                             <th>Email</th>
                                             <th width="150px">Nomor Telepon</th>
@@ -32,7 +29,6 @@
                                             @foreach($pendaftar as $key => $pdftr)
                                                 <tr id="tr_{{$pdftr->id}}">
                                                     <th scope="row" align="center">{{$loop->iteration}}</th>
-                                                    <td><input type="checkbox" class="sub_chk checkBoxClass" value="{{$pdftr->id}}" data-id="{{$pdftr->id}}" name="ids"></td>
                                                     <td>{{$pdftr->namaLengkap}}</td>
                                                     <td>{{$pdftr->email}}</td>
                                                     <td>{{$pdftr->nomorTelepon}}</td>

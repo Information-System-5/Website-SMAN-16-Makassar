@@ -22,7 +22,7 @@
             <label for="namaLengkap"> Nama Lengkap </label>
             <input type="text" class="input @error('namaLengkap') is-invalid @enderror" name="namaLengkap" id="namaLengkap"/>
             @error('namaLengkap')
-              <div class="invalid-feedback"> {{$message}} </div>
+              <div class="invalid-feedback"><p> {{$message}}</p> </div>
             @enderror
           </div>
 

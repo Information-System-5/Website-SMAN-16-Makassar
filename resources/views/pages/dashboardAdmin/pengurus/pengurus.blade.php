@@ -2,6 +2,11 @@
 
 @section('main')
     <!-- ==MAIN CONTENT== -->
+  <div class="container-fluid px-4">
+    <h1 class="mt-4">Pengurus</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Paraga Scout</li>
+    </ol>
     <a href="/admin/editPengurus/1" class="btn-warning mt-4 mb-4 text-white float-right mr-5 pt-2 pb-2 pr-3 pl-3"><i class="fas fa-edit"></i></a>
     <div class="wrapper-pengurus">
       <div class="row" id="editable">
@@ -94,4 +99,5 @@
       </div>
 
     </div>
+  </div>
 @endsection
