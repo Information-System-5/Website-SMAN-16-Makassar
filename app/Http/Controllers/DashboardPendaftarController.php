@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\pendaftar;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class DashboardPendaftarController extends Controller
 {
@@ -99,5 +100,19 @@ class DashboardPendaftarController extends Controller
     {
         pendaftar::destroy($pendaftar->id);
         return redirect('/admin/listpendaftar')->with('status', 'Pendaftar berhasil dihapus!');
+    }
+
+    public function deleteAll(Pendaftar $pendaftar){
+        $ids = $pendaftar->ids;
+        pendaftar::whereIn('id',$ids)->delete();
+        return response()->json(['success'=>"Pendaftar Deleted successfully."]);
+    }
+    
+    public function cetak_pdf()
+    {
+    	$pendaftar = pendaftar::all();
+ 
+    	$pdf = PDF::loadview('pendaftar_pdf',['pendaftar'=>$pendaftar]);
+    	return $pdf->download('laporan-pendaftar-pdf');
     }
 }
