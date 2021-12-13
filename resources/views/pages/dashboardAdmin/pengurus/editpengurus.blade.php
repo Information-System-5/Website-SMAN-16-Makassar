@@ -1,6 +1,11 @@
 @extends('layout.adminLayout')
 
 @section('main')
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Edit Pengurus</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Paraga Scout</li>
+    </ol>
     <form action="/admin/pengurus/{{$pengurus->id}}" method="post">
         @method('put')
         @csrf
@@ -61,8 +66,9 @@
                     <input type="text" class="p-2" id="" value="{{$pengurus->pemangkuAdatPutri}}" name="pemangkuAdatPutri">
                 </div>
             </div>
+            <!-- Button Save -->
+            <button type="submit" value="submit" class="btn btn-primary mt-3">Simpan</button>
         </div>
-        <!-- Button Save -->
-        <button type="submit" value="submit" class="btn btn-primary mt-3">Simpan</button>
     </form>
+</div>
 @endsection

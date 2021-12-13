@@ -4,6 +4,11 @@
 
     <!-- ==MAIN CONTENT== -->
     <div class="wrapper-pengurus">
+    <div class="jumbotron">
+        <div class="container">
+          <h3 class="display-4 text-center"> Struktur Organisasi </h3>
+        </div>
+      </div>
       <div class="row" id="editable">
         <div class="col-md-3 col pengurus"></div>
         <div class="col-md-6">

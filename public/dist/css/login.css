@@ -1,3 +1,14 @@
+:root {
+  --putih: #fff;
+  --merah-2: #370617;
+  --merah-3: #6a040f;
+  --merah-4: #9d0208;
+  --abu: rgb(194, 194, 194);
+  --kuning-6: #e85d04;
+  --kuning-7: #faa307;
+  --hitam: #000;
+}
+
 /* ------------- 
   LOGIN STYLE 
   ----------------*/
@@ -5,8 +16,8 @@
     font-family: "Work Sans", sans-serif;
     display: flex;
     position: relative;
-    margin: auto;
-    margin-top: 70px;
+    top:10%;
+    bottom: 10%;
     width: 80%;
     height: 80%;
   }
@@ -48,6 +59,8 @@
     text-align: center;
     color: #fff;
     margin: auto;
+    letter-spacing: 12px;
+    font-size: 42px;
   }
   .login-info {
     display: flex;
@@ -58,9 +71,13 @@
     background-color: #9d0208;
   }
   .login-info h1 {
-    padding: 0 15%;
+    padding-bottom: 25px;
+    padding-top: 45px;
     color: #fff;
-    margin-top: 50px;
+    padding-left: 73px;
+    letter-spacing: 5px;
+    font-size: 42px;
+    font-weight: 505;
   }
   .login-info .login-input {
     display: flex;
@@ -74,7 +91,7 @@
     width: 100%;
   
     background-color: #9d0208;
-    border: 2px solid #faa307;
+    border: 2px solid var(--kuning-7);
     border-radius: 5px;
     padding: 4% 4%;
     margin: 8px 0;
@@ -87,9 +104,145 @@
     outline: none !important;
   }
   .login-info a {
-    font-size: 10px;
+    font-size: 14px;
     font-style: italic;
-    color: #faa307;
+    color: var(--kuning-7);
+    padding: 0 15%;
+    position: relative;
+    float: right;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .login-info .button {
+    padding: 0 5%;
+  }
+  .login-info .button button {
+    color: var(--merah-3);
+    background-color: var(--kuning-7);
+    border: none;
+    border-radius: 5px;
+    padding: 4px 20px;
+    right: 0%;
+  }
+  .login-info .button button:hover {
+    background-color: #ffbd41;
+  }
+  .login-info .button button:active {
+    background-color: var(--kuning-7);
+  }
+
+  .card-author {
+    font-size: 19px;
+    color: var(--kuning-7);
+    font-weight: bold;
+  }
+  .card-date {
+    font-size: 15px;
+  }
+  .wrapper-preview .konten .link-preview {
+    text-align: right;
+  }
+  .wrapper-preview .konten .link-preview a {
+    font-size: 13px;
+    color: var(--merah-2);
+  }
+  /* ------------- 
+    LOGIN STYLE 
+    ----------------*/
+  .wrapper-login {
+    font-family: "Work Sans", sans-serif;
+    display: flex;
+    position: relative;
+    top:10%;
+    bottom: 10%;
+    width: 80%;
+    height: 80%;
+  }
+  .login-title {
+    position: relative;
+    width: 45%;
+    height: 100%;
+    text-align: center;
+  }
+  .login-title .title-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .login-title .title-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .login-title .title-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 30% 0;
+    z-index: 4;
+  }
+  .login-title .login-transparent-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #e85d04;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 3;
+  }
+  .login-title h1 {
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    letter-spacing: 12px;
+    font-size: 42px;
+  }
+  .login-info {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+    position: relative;
+    background-color: #9d0208;
+  }
+  .login-info h1 {
+    padding-bottom: 25px;
+    padding-top: 45px;
+    color: #fff;
+    padding-left: 73px;
+    letter-spacing: 5px;
+    font-size: 42px;
+    font-weight: 505;
+  }
+  .login-info .login-input {
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login-info .login-input input {
+    color: #fff;
+    width: 100%;
+  
+    background-color: #9d0208;
+    border: 2px solid var(--kuning-7);
+    border-radius: 5px;
+    padding: 4% 4%;
+    margin: 8px 0;
+  }
+  .login-info .login-input input::placeholder {
+    color: #fff;
+    opacity: 0.5;
+  }
+  .login-info .login-input input:focus {
+    outline: none !important;
+  }
+  .login-info a {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--kuning-7);
     padding: 0 15%;
     position: relative;
     float: right;
@@ -102,8 +255,8 @@
     padding: 0 5%;
   }
   .login-info .button button {
-    color: #6a040f;
-    background-color: #faa307;
+    color: var(--merah-3);
+    background-color: var(--kuning-7);
     border: none;
     border-radius: 5px;
     padding: 4px 20px;
@@ -112,6 +265,5 @@
     background-color: #ffbd41;
   }
   .login-info .button button:active {
-    background-color: #faa307;
+    background-color: var(--kuning-7);
   }
-  

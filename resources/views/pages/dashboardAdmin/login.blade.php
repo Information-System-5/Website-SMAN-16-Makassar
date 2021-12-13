@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link href="{{URL::asset('/dist/css/styles.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{URL::asset('/dist/css/login.css') }}" type="text/css">
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/54218bd639.js" crossorigin="anonymous"></script>
@@ -28,14 +28,23 @@
 
       <div class="login-info">
         <h1>Login</h1>
-        <div class="login-input">
-          <input type="text" placeholder="Username" />
-          <input type="text" placeholder="Password" />
-        </div>
-        <a href="">Lupa password?</a>
-        <div class="button">
-          <button type="button" class="btn btn-warning">Login</button>
-        </div>
+        <form method="post" action="/login">
+          @csrf
+          <div class="login-input">
+            <input type="text" placeholder="username" name="name"/>
+            <input type="password" placeholder="Password" name="password" />
+          </div>
+          @if(session('message'))
+          <div class="container">
+            <div class="alert alert-danger" role="alert">
+              {{session('message')}}
+            </div>
+          </div>
+          @endif
+          <div class="button text-center mt-4" >
+            <button type="submit" class="btn btn-warning">Login</button>
+          </div>
+        </form>
       </div>
   </div>
 </body>
