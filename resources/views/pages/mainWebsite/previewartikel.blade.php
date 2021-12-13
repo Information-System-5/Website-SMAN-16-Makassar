@@ -17,8 +17,9 @@
             </div>
            </div>
            <div class="konten">
-            <div class="jumbotron">
+            <div class="jumbotron jumbotron-fluid">
              <!-- foto jumbotron ada di css -->
+             <img src="{{asset('storage/'. $datas->gambar_artikel)}}" class="img-fluid">
             </div>
             <div class="container mt-5">
              <p class="isi-konten">

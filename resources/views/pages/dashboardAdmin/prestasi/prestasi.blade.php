@@ -49,7 +49,7 @@
                                             <td>{{$loop -> iteration}}</td>
                                             {{-- <td>{{$data->title}}</td> --}}
                                             <td>{!!Str::limit($data ->title, 50, '...')!!}</td>
-                                            <td>{!!Str::limit($data->body, 50, '...')!!}</td>
+                                            <td>{{strip_tags(Str::limit($data->body, 130, '...'))}}</td>
                                             <td><a href="{{url("/admin/prestasi/{$data->title}")}}">Lebih detail</a></td>
                                             <td class="text-center">
                                                 <form action="/admin/prestasi/{{$data->title}}" method="post">

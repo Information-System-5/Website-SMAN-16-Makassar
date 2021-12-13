@@ -17,7 +17,7 @@ class PrestasiController extends Controller
         // $datas = Prestasi::all();
         // $datas->isi_artikel = Str::limit($this->isi_artikel, 100, '...');
         return view('pages.mainWebsite.prestasi', [
-            "datas" => Prestasi::latest()->filter(request(['search']))->paginate(5)
+            "datas" => Prestasi::latest()->filter(request(['search']))->paginate(10)
         ]);
     }
 

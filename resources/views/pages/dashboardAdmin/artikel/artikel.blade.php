@@ -53,7 +53,8 @@
                                                 {{-- <td class="judul_artikel">{{$data -> judul_artikel}}</td> --}}
                                                 <td class="judul_artikel">{!!Str::limit($data -> judul_artikel, 50, '...')!!}</td>
                                                 {{-- <td class="block-with-text">{!!$data -> isi_artikel!!}</td> --}}
-                                                <td>{!!Str::limit($data->isi_artikel, 40, '...')!!}</td>
+                                                {{-- <td>{!!Str::limit($data->isi_artikel, 40, '...')!!}</td> --}}
+                                                <td>{{strip_tags(Str::limit($data->isi_artikel, 130, '...'))}}</td>
                                                 <td>{{$data -> penulis_artikel}}</td>
                                                 <td>{{$data -> waktu_dibuat_artikel}}</td>
                                                 <td><a href="{{url("/admin/artikel/{$data->judul_artikel}")}}">Lebih detail</a></td>

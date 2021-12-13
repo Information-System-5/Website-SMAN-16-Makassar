@@ -53,8 +53,8 @@
               <h3 class="card-title">Tidak ada postingan</h3>
             @endforelse
          </div>
-         <div class="container-button">
-          <div class=" text-center mt-4 ">
+         <div class="container-button mx-auto">
+          <div class="mt-4 ">
             {{$datas -> links()}}
           </div>
         </div>

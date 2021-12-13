@@ -28,7 +28,8 @@
             <div class="row mb-2">
               @forelse ($datas as $data)
               <div class="col-md-4 col-sm-12">
-                <a href="artikel.php">
+                {{-- <a type="hidden" href="/artikel/{$data->judul_artikel}">Artikel Lainnya </a><i class="fas fa-arrow-right pl-2"></i> --}}
+                <a href="{{url("/artikel/{$data->judul_artikel}")}}">
                   <div class="card h-100">
                     <div class="foto-card">
                       {{-- <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="..."> --}}
@@ -37,6 +38,7 @@
                     <div class="card-body">
                       <p>{{$data->judul_artikel}}</p>
                     </div>
+                    {{-- <a href="/artikel/{$data->judul_artikel}"></a> --}}
                   </div>
                 </a>
               </div>
@@ -75,7 +77,7 @@
             <div class="row mb-2">
               @forelse ($datas2 as $data)
               <div class="col-md-4 col-sm-12">
-                <a href="artikel.php">
+                <a href="{{url("/prestasi/{$data->title}")}}">
                   <div class="card h-100">
                     <div class="foto-card">
                       {{-- <img src="../dist/img/header-jumbotron.jpg" class="card-img-top" alt="..."> --}}
@@ -111,7 +113,7 @@
             </div> --}}
           
             <div class="text-right lainnya mb-5">
-              <a href="">Prestasi Lainnya </a><i class="fas fa-arrow-right pl-2"></i>
+              <a href="/prestasi">Prestasi Lainnya </a><i class="fas fa-arrow-right pl-2"></i>
             </div>
           </div>
         </div>

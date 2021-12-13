@@ -6,19 +6,19 @@
       <div class="container">
         <div class="title">
           <h1 class="mb-5">{{$datas->title}}</h1>
-           {{-- <div class="detail-artikel">
+           <div class="detail-artikel">
              <ul>
-               <li class="penulis">{{$datas->title}}</li>
-               <li class="pr-1 pl-1">|</li>
-               <li class="hari-publikasi">Jum'at</li>,   <!-- KOMA JGN DIHAPUS -->
-               <li class="tanggal-publish">10 Mei 2021</li>
+               {{-- <li class="penulis">{{$datas->title}}</li> --}}
+               {{-- <li class="pr-1 pl-1">|</li>
+               <li class="hari-publikasi">Jum'at</li>,   <!-- KOMA JGN DIHAPUS --> --}}
+               <li class="tanggal-publish">{{$datas->created_at}}</li>
              </ul>
-           </div> --}}
+           </div>
         </div>
        </div>
        <div class="konten">
-        <div class="jumbotron">
-          {{-- <img src="{{asset('storage/'. $datas->picture)}}" class="img-preview img-fluid"> --}}
+        <div class="jumbotron jumbotron-fluid">
+          <img src="{{asset('storage/'. $datas->picture)}}" class="img-fluid">
         </div>
         <div class="container mt-5">
          <p class="isi-konten">
