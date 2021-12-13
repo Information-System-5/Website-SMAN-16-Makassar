@@ -17,7 +17,7 @@
                                 <a href="{{url("/admin/artikel/create")}}" class="btn btn-primary mb-3">Buat Artikel</a>
                             </div>
                             <div class="col-md-4">
-                                <form action="/admin/prestasi">
+                                <form action="/admin/artikel">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Pencarian" name="search" value="{{request('search')}}">
                                         <div class="input-group-append">

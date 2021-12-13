@@ -37,7 +37,7 @@
                                             @endif
                                             
                                             <label for="picture" class="form-label"></label>
-                                            <input onchange="previewImage()" class="form-control @error('picture') is-invalid @enderror" type="file" id="picture" name="picture" required autofocus>
+                                            <input onchange="previewImage()" class="form-control @error('picture') is-invalid @enderror" type="file" id="picture" name="picture" autofocus>
                                             @error('picture')
                                                 <div class="invalid-feedback">
                                                     {{$message}}
