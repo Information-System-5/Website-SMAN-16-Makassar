@@ -114,8 +114,6 @@
     margin-right: 0;
   }
   .login-info .button {
-    position: relative;
-    margin: auto;
     padding: 0 5%;
   }
   .login-info .button button {
@@ -124,6 +122,7 @@
     border: none;
     border-radius: 5px;
     padding: 4px 20px;
+    right: 0%;
   }
   .login-info .button button:hover {
     background-color: #ffbd41;

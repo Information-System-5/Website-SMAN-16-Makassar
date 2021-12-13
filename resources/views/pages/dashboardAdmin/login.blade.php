@@ -35,11 +35,13 @@
             <input type="password" placeholder="Password" name="password" />
           </div>
           @if(session('message'))
+          <div class="container">
             <div class="alert alert-danger" role="alert">
               {{session('message')}}
             </div>
+          </div>
           @endif
-          <div class="button">
+          <div class="button text-center mt-4" >
             <button type="submit" class="btn btn-warning">Login</button>
           </div>
         </form>

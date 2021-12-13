@@ -16,7 +16,7 @@ class AuthController extends Controller
         if(Auth::attempt(['name'=>$request->name, 'password'=>$request->password])){
             return redirect('/admin/prestasi');
         }
-            return redirect('/login')->with('message', 'Email atau Password salah');
+            return redirect('/login')->with('message', 'Email atau Password salah!');
     }
     public function logout() 
     {
