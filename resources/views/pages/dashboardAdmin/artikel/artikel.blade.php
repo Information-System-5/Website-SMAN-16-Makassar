@@ -36,7 +36,7 @@
                                 <table id="datatablesSimple" class="space">
                                     <thead>
                                         <tr>
-                                            {{-- <th>No.</th> --}}
+                                            <th>No.</th>
                                             <th>Judul Artikel</th>
                                             <th>Isi Artikel</th>
                                             <th>Penulis</th>
@@ -49,7 +49,7 @@
                                     <tbody>
                                         @forelse ($datas as $data)
                                             <tr>
-                                                {{-- <td>{{$loop -> iteration}}</td> --}}
+                                                <td>{{$loop -> iteration}}</td>
                                                 {{-- <td class="judul_artikel">{{$data -> judul_artikel}}</td> --}}
                                                 <td class="judul_artikel">{!!Str::limit($data -> judul_artikel, 50, '...')!!}</td>
                                                 {{-- <td class="block-with-text">{!!$data -> isi_artikel!!}</td> --}}
