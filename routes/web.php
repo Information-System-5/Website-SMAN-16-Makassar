@@ -26,18 +26,17 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // Main Website
 Route::resource('/', HomepageController::class);
-// Route::get('/', function () {
-//     return view('pages.mainWebsite.index');
-// });
+
+Route::resource('/artikel', ArtikelController::class);
+
+Route::resource('/prestasi', PrestasiController::class);
 
 Route::get('/formpendaftaran', function () {
     return view('pages.mainWebsite.formpendaftaran');
 });
+
 Route::post('/formpendaftaran', [DashboardPendaftarController::class, 'store']);
 
-Route::resource('/artikel', ArtikelController::class);
-
-//pengurus
 Route::get('/pengurus', [DashboardPengurusController::class, 'tampilPengurus']);
 
 Route::get('/previewartikel', function () {
